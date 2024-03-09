@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "admin";
 $password = "admin";
-$database = "miespe2";
+$database = "proyecto14768";
 
 try {
     // Crear una conexión PDO

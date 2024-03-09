@@ -36,8 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 header("Location: ../html/administrador.html");
             } elseif ($result['rol'] == 'docente') {
                 header("Location: ../html/docente.html");
-            } elseif ($result['rol'] == 'superior') {
-                header("Location: ../html/superior.html");
             } elseif ($result['rol'] == 'laboratorista') {
                 header("Location: ../html/laboratorista.html");
             }
@@ -53,4 +51,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Si no se enviaron datos de inicio de sesión, mostrar un mensaje de error
     echo "Usuario o contraseña incorrectos";
 }
-?>
