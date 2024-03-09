@@ -79,6 +79,9 @@
 
 <body class="skin-0 yui3-skin-sam controls-visible signed-in public-page site  dockbar-ready fixed-sidebar pace-done"
     monica-locale="es_419" monica-version="4.7.2" monica-id="fhimbbbmdjiifimnepkibjfjbppnjble">
+
+    <!-- CREAR NUEVO USUARIO -->
+
     <h2>Registrar Nuevo Usuario</h2>
     <form action="../php/new_user.php" method="post">
         <label for="usuario">Usuario:</label>
@@ -105,8 +108,10 @@
     </form>
     <br><br>
 
+    <!-- AGREGAR NUEVA MATERIA -->
+
     <h2>Agregar Nueva Materia</h2>
-    <form action="insertar_materia.php" method="post">
+    <form action="../php/insertar_materia.php" method="post">
         <label for="id_materia">ID Materia:</label>
         <input type="text" id="id_materia" name="id_materia" required><br><br>
 
@@ -130,6 +135,7 @@
 
         <input type="submit" value="Agregar Materia">
     </form><br><br>
+
     <div class="pace  pace-inactive">
         <div class="pace-progress" data-progress-text="100%" data-progress="99"
             style="transform: translate3d(100%, 0px, 0px);">
