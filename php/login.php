@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['usuario'] = $usuario;
 
             if ($result['rol'] == 'administrador') {
-                header("Location: ../html/administrador.html");
+                header("Location: ../html/administrador/administrador.html");
             } elseif ($result['rol'] == 'docente') {
                 header("Location: ../html/docente.html");
             } elseif ($result['rol'] == 'laboratorista') {
