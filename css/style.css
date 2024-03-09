@@ -1,9 +1,3 @@
-/*
-*
-*   INSPINIA - Responsive Admin Theme
-*   version 2.0
-*
-*/
 .aui h1,
 .aui h2,
 .aui h3,
@@ -15,6 +9,7 @@
 
 .aui h1 {
   font-size: 30px;
+color: #e0ebed;
 }
 
 .aui h2 {
