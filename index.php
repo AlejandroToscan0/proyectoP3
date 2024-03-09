@@ -34,7 +34,7 @@
     <style class="darkreader darkreader--override" media="screen"></style>
     <style>
         body {
-            background-color: #e0ebed;
+            background-color: #e6e9ea;
         }
     </style>
 </head>
@@ -64,34 +64,33 @@
                                 <div class="slider">
                                     <ul>
                                         <li>
-                                            <h2>&nbsp;&nbsp;SISTEMA INTEGRADO DE INFORMACIÓN</h2>
+                                            <h2>&nbsp;&nbsp;INFORMACIÓN</h2>
                                             <h4><a href="https://miespe.espe.edu.ec/" style="color:rgb(3, 3, 3);">
-                                                    Gestión
-                                                    Talento Humano </a></h4>
+                                                    Laboratorios </a></h4>
                                         </li>
                                         <li>
-                                            <h2>&nbsp;&nbsp;SISTEMA INTEGRADO DE INFORMACIÓN</h2>
+                                            <h2>&nbsp;&nbsp;INFORMACIÓN</h2>
                                             <h4><a href="https://miespe.espe.edu.ec/" style="color:rgb(3, 3, 3);">
                                                     Docentes </a></h4>
                                         </li>
                                         <li>
-                                            <h2>&nbsp;&nbsp;SISTEMA INTEGRADO DE INFORMACIÓN</h2>
+                                            <h2>&nbsp;&nbsp;INFORMACIÓN</h2>
                                             <h4><a href="https://miespe.espe.edu.ec/" style="color:rgb(3, 3, 3);">
                                                     Gestión
                                                     Académica</a></h4>
                                         </li>
                                         <li>
-                                            <h2>&nbsp;&nbsp;SISTEMA INTEGRADO DE INFORMACIÓN</h2>
+                                            <h2>&nbsp;&nbsp;INFORMACIÓN</h2>
                                             <h4> <a href="https://miespe.espe.edu.ec/" style="color:rgb(3, 3, 3);">
-                                                    Estudiantes </a></h4>
+                                                    Horarios </a></h4>
                                         </li>
                                         <li>
-                                            <h2>&nbsp;&nbsp;SISTEMA INTEGRADO DE INFORMACIÓN</h2>
+                                            <h2>&nbsp;&nbsp;INFORMACIÓN</h2>
                                             <h4><a href="https://miespe.espe.edu.ec/" style="color:rgb(3, 3, 3);">
                                                     Investigación </a></h4>
                                         </li>
                                         <li>
-                                            <h2>&nbsp;&nbsp;SISTEMA INTEGRADO DE INFORMACIÓN</h2>
+                                            <h2>&nbsp;&nbsp;INFORMACIÓN</h2>
                                             <h4> <a href="https://miespe.espe.edu.ec/" style="color:rgb(3, 3, 3);">
                                                     Administrativos </a></h4>
                                         </li>
@@ -100,7 +99,7 @@
                             </div>
                         </div>
                         <figcaption>
-                            <h2>UNIVERSIDAD DE LAS FUERZAS ARMADAS - ESPE</h2>
+                            <h2>SISTEMA INTEGRADO DE HORARIOS - CAJAS TOSCANO </h2>
                         </figcaption>
                         <a href="https://srvcas.espe.edu.ec/authenticationendpoint/login.do?Name=PreLoginRequestProcessor&amp;commonAuthCallerPath=%252Fcas%252Flogin&amp;forceAuth=true&amp;passiveAuth=false&amp;service=https%3A%2F%2Fmiespe.espe.edu.ec%2Fc%2Fportal%2Flogin&amp;tenantDomain=carbon.super&amp;sessionDataKey=3703609c-9060-47c0-a398-7e0991ad2b88&amp;relyingParty=portal_luminis&amp;type=cas&amp;sp=portal_luminis&amp;isSaaSApp=false&amp;authenticators=BasicAuthenticator:LOCAL#"></a>
                     </figure>
@@ -108,7 +107,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <div class="col-10 offset-1 hidden-xs hidden-sm text-center">
-                        <img src="img/Espe-Angular-Logo.png" style="padding-top: 65px; width: 375; " class="img-fluid">
+                        <img src="img/Espe-Angular-Logo.png" style="padding-top: 65px; width: 375;" class="img-fluid">
                     </div>
                     <div class="col-10 offset-1 visible-xs visible-sm">
                         <img src="img/Logo-MiESPE.png" style="padding-top: 40px;" class="img-fluid align-content-center">
@@ -145,13 +144,9 @@
                                         <div class="form-actions">
 
                                             <div>¿Olvidó su <a class="" href="https://recover.espe.edu.ec/">Contraseña?</a>
-                                                <a href="https://youtu.be/Z9TA8hF3orc" target="_blank"><span data-toggle="tooltip" data-placement="bottom" title="Ver video" class="glyphicon glyphicon-facetime-video"></span></a>
                                             </div>
                                             <div>
                                                 Verifique su <a target="_blank" class="" href="https://bannapitest.espe.edu.ec/Reportes/reportPublic.php?key=espeCU">Usuario</a>
-                                            </div>
-                                            <div>
-                                                Mesa de <a target="_blank" class="" href="https://help-desk.espe.edu.ec/">Ayuda</a>
                                             </div>
                                         </div>
 
@@ -161,10 +156,10 @@
                                     </div>
 
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
-                                        <div class="form-actions" style="visibility: hidden">
-                                            Dont have an account?
-                                            <a id="registerLink" href="https://srvcas.espe.edu.ec/accountrecoveryendpoint/register.do?callback=https%3A%2F%2Fsrvcas.espe.edu.ec%3A443%2Fauthenticationendpoint%2Flogin.do%3FName%3DPreLoginRequestProcessor%26commonAuthCallerPath%3D%25252Fcas%25252Flogin%26forceAuth%3Dtrue%26passiveAuth%3Dfalse%26service%3Dhttps%253A%252F%252Fmiespe.espe.edu.ec%252Fc%252Fportal%252Flogin%26tenantDomain%3Dcarbon.super%26sessionDataKey%3D3703609c-9060-47c0-a398-7e0991ad2b88%26relyingParty%3Dportal_luminis%26type%3Dcas%26sp%3Dportal_luminis%26isSaaSApp%3Dfalse%26authenticators%3DBasicAuthenticator%3ALOCAL">
-                                                Register Now
+                                        <div class="form-actions" style="visibility: visible">
+                                            No tiene una cuenta?
+                                            <a id="registerLink" href="html/registro.html">
+                                                Registrar ahora
                                             </a>
                                         </div>
                                     </div>
@@ -176,8 +171,8 @@
                             <div class="clearfix"></div>
                             <!-- /content -->
                             <div class="col-12 center-block">
-                                <div class="row">
-                                    <ul class="nav nav-tabs">
+                                <div class="row" style="padding-left: 15px;">
+                                    <ul class="nav nav-tabs" style="padding-left: 15px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);">
                                         <li>
                                             <a href="https://srvcas.espe.edu.ec/authenticationendpoint/login.do?Name=PreLoginRequestProcessor&amp;commonAuthCallerPath=%252Fcas%252Flogin&amp;forceAuth=true&amp;passiveAuth=false&amp;service=https%3A%2F%2Fmiespe.espe.edu.ec%2Fc%2Fportal%2Flogin&amp;tenantDomain=carbon.super&amp;sessionDataKey=3703609c-9060-47c0-a398-7e0991ad2b88&amp;relyingParty=portal_luminis&amp;type=cas&amp;sp=portal_luminis&amp;isSaaSApp=false&amp;authenticators=BasicAuthenticator:LOCAL#1a" data-toggle="tab" class="text-success">
                                                 <i class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" title="Recomendaciones"></i>
@@ -196,12 +191,12 @@
                                     </ul>
                                 </div>
 
-                                <div class="tab-content row" style="height:180px; margin-bottom: 30px;">
+                                <div class="tab-content row" style="height:180px; margin-bottom: 30px; padding-left: 15px;">
                                     <div class="tab-pane " id="1a"><br>
                                         <h4>RECOMENDACIONES</h4>
                                         <p><span class="text-danger">Eliminar cookies del navegador</span></p>
                                     </div>
-                                    <div class="tab-pane active" id="2a"><br>
+                                    <div class="tab-pane active" id="2a" style="box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);"><br>
                                         <h4>INFORMACIÓN GENERAL</h4>
                                         <p>Revise la información disponible, utilizando los siguientes enlaces:</p>
                                         <ul class="list-group list-group-flush">
