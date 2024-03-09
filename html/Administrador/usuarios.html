@@ -1,0 +1,28 @@
+<!-- CREAR NUEVO USUARIO -->
+
+<h2>Registrar Nuevo Usuario</h2>
+<form action="../php/new_user.php" method="post">
+    <label for="usuario">Usuario:</label>
+    <input type="text" id="usuario" name="usuario" required><br><br>
+
+    <label for="clave">Clave:</label>
+    <input type="password" id="clave" name="clave" required><br><br>
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="cedula">Cedula:</label>
+    <input type="number" id="cedula" name="cedula" required><br><br>
+
+    <label for="rol">Rol:</label>
+    <select id="rol" name="rol">
+        <option value="laboratorista">Laboratorista</option>
+        <option value="docente">Docente</option>
+        <option value="administrador">Administrador</option>
+        <option value="superior">Superior</option>
+    </select><br><br>
+
+    <input type="submit" value="Registrar Usuario">
+</form>
+<br><br>
+
