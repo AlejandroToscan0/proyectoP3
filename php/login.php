@@ -35,9 +35,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($result['rol'] == 'administrador') {
                 header("Location: ../html/administrador/administrador.html");
             } elseif ($result['rol'] == 'docente') {
-                header("Location: ../html/docente.html");
+                header("Location: ../html/docente/docente.html");
             } elseif ($result['rol'] == 'laboratorista') {
-                header("Location: ../html/laboratorista.html");
+                header("Location: ../html/laboratorista/laboratorista.html");
             }
         } else {
             // Si las contraseñas no coinciden, redirigir a una página de error

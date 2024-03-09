@@ -364,3 +364,6 @@ p:last-child { margin-bottom: 0; }
     .fa-3x { font-size: 2.2em; }
 }
 
+a {
+    text-decoration: none;
+}
