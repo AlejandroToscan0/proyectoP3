@@ -6,7 +6,7 @@
     $id = $_SESSION['id'];
     $nombre = $_SESSION['nombre'];
     $rol = $_SESSION['rol'];
-    echo "Usuarioss: $usuario, IDsss: $id, Nombre: $nombre, Rol: $rol";
+    echo "Usuario: $usuario, ID: $id, Nombre: $nombre, Rol: $rol";
 
     // DEPARTAMENTOS
     try {
