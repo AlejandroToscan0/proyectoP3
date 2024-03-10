@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+/* Estilos para la barra lateral */
+
+.navLateral {
+    background-color: #333; /* Cambia el color de fondo a verde oscuro */
+}
+
+.navLateral-body-tittle-menu {
+    background-color: #333; /* Cambia el color de fondo del título del menú a verde oscuro */
+    color: #ffffff; /* Cambia el color del texto a blanco */
+}
+
+.navLateral-body-logo {
+    background-color: #333; /* Cambia el color de fondo del logo a verde oscuro */
+}
+
+.menu-principal li a {
+    color: #000000; /* Cambia el color del texto de los elementos del menú a negro */
+}
+
+.menu-principal li a:hover {
+    background-color: #666; /* Cambia el color de fondo al pasar el ratón a un tono más oscuro */
+}
+
+/* Estilos para la barra horizontal */
+.navBar {
+    background-color: #222; /* Cambia el color de fondo a plomo oscuro */
+}
+
+.navBar-options {
+    background-color: #222; /* Cambia el color de fondo de las opciones de la barra a plomo oscuro */
+}
+.text-center.tittles2 {
+    color: #31470b; /* Color del texto */
+    font-size: 20px; /* Tamaño del texto */
+    margin: 10px 0; /* Margen superior e inferior */
+    font-weight: bold; /* Hace que el texto esté en negrita */
+	 font-family: Times, serif; /* Especifica el tipo de letra */
+}
+
+/* Estilos para el formulario */
+#crearUsuarioForm {
+    margin-top: 10px; /* Reducir el espacio superior */
+    padding: 20px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que el formulario esté visible */
+}
+
+#crearUsuarioForm label {
+    color: #000000; /* Color del texto de las etiquetas */
+    font-weight: bold; /* Negrita */
+}
+
+#crearUsuarioForm input[type="text"],
+#crearUsuarioForm input[type="password"],
+#crearUsuarioForm input[type="email"],
+#crearUsuarioForm input[type="number"],
+#crearUsuarioForm select {
+    width: calc(100% - 40px); /* Ancho total menos el espacio del padding */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 3px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+#crearUsuarioForm select {
+    height: 40px; /* Altura del select */
+}
+
+#crearUsuarioForm input[type="submit"] {
+    width: calc(100% - 40px); /* Ancho total menos el espacio del padding */
+    padding: 10px; /* Espaciado interno */
+    background-color: #5E7E50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de tipo mano */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+#crearUsuarioForm input[type="submit"]:hover {
+    background-color: #5E7E50; /* Cambia el color de fondo al pasar el ratón */
+}
+
+/* Estilos para el formulario "Materia" */
+#agregarMateriaForm {
+    margin-top: 10px; /* Reducir el espacio superior */
+    padding: 15px; /* Espaciado interno */
+    background-color: #f2f2f2; /* Color de fondo */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    max-width: 450px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra horizontalmente */
+    display: block; /* Asegura que el formulario esté visible */
+}
+
+#agregarMateriaForm label {
+    color: #000000; /* Color del texto de las etiquetas */
+    font-weight: bold; /* Negrita */
+}
+
+#agregarMateriaForm input[type="text"],
+#agregarMateriaForm input[type="password"],
+#agregarMateriaForm input[type="email"],
+#agregarMateriaForm input[type="number"],
+#agregarMateriaForm select {
+    width: calc(100% - 40px); /* Ancho total menos el espacio del padding */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espacio inferior */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 3px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+}
+
+#agregarMateriaForm select {
+    height: 40px; /* Altura del select */
+}
+
+#agregarMateriaForm input[type="submit"] {
+    width: calc(100% - 40px); /* Ancho total menos el espacio del padding */
+    padding: 10px; /* Espaciado interno */
+    background-color: #5E7E50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 3px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de tipo mano */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+#agregarMateriaForm input[type="submit"]:hover {
+    background-color: #5E7E50; /* Cambia el color de fondo al pasar el ratón */
+}

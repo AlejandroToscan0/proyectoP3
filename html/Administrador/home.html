@@ -1,0 +1,113 @@
+<!-- 
+* Copyright 2016 Carlos Eduardo Alfaro Orellana
+-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Administrador</title>
+	<link rel="stylesheet" href="../../css_2/estilos.css">
+	<link rel="stylesheet" href="../../css_2/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" href="../../css_2/main.css">
+	<link rel="stylesheet" href="../../css_2/material.min.css">
+	<link rel="stylesheet" href="../../css_2/material-design-iconic-font.min.css">
+	<link rel="stylesheet" href="../../css_2/normalize.css">
+	<link rel="stylesheet" href="../../css_2/sweetalert2.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+	<link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="cargarApp()">
+	<!-- navBar -->
+	<div class="full-width navBar">
+		<div class="full-width navBar-options">
+			<i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>
+			<div class="mdl-tooltip" for="btn-menu">Menu</div>
+			<nav class="navBar-options-list">
+				<ul class="list-unstyle">
+					<li class="btn-Notification" id="notifications">
+						<i class="zmdi zmdi-notifications"></i>
+						<!-- <i class="zmdi zmdi-notifications-active btn-Notification" id="notifications"></i> -->
+						<div class="mdl-tooltip" for="notifications">Notifications</div>
+					</li>
+					<li class="btn-exit" id="btn-exit">
+						<i class="zmdi zmdi-power"></i>
+						<div class="mdl-tooltip" for="btn-exit">LogOut</div>
+					</li>
+					<li class="text-condensedLight noLink"><small>Usuario</small></li>
+					<li class="noLink">
+						<figure>
+							<img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
+						</figure>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<!-- navLateral -->
+	<section class="full-width navLateral">
+		<div class="full-width navLateral-bg btn-menu"></div>
+		<div class="full-width navLateral-body">
+			<div class="full-width navLateral-body-logo text-center tittles">
+				<i class="zmdi zmdi-close btn-menu"></i>ADMINISTRACION</div>
+			<figure class="full-width" style="height: 77px;">
+				<div class="navLateral-body-cl">
+					<img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
+				</div>
+				<figcaption class="navLateral-body-cr hide-on-tablet">
+				  <p>&nbsp;</p>
+				  <p>ADMINISTRADOR</p>
+				</figcaption>
+			</figure>
+			<div class="full-width tittles navLateral-body-tittle-menu">
+				<i class="zmdi zmdi-desktop-mac"></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
+			</div>
+			<nav class="full-width">
+				<ul class="full-width list-unstyle menu-principal">
+					<li class="full-width">
+						<a href="#" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-view-dashboard"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">HORARIO</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="egresos.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-balance"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">GESTION PERFILES</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+					<li class="full-width">
+						<a href="ingresos.html" class="full-width">
+							<div class="navLateral-body-cl">
+								<i class="zmdi zmdi-truck"></i>
+							</div>
+							<div class="navLateral-body-cr hide-on-tablet">GESTION MATERIAS</div>
+						</a>
+					</li>
+					<li class="full-width divider-menu-h"></li>
+				</ul>
+			</nav>
+		</div>
+	</section>
+	
+	<section class="full-width pageContent">
+    
+     
+	
+
+		<center>
+	
+			</div>
+		</center>
+	</section>
+</body>
+
+</html>

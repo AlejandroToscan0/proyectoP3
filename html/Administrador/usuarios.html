@@ -1,28 +1,127 @@
 <!-- CREAR NUEVO USUARIO -->
+<!-- 
+* Copyright 2016 Carlos Eduardo Alfaro Orellana
+-->
+<!DOCTYPE html>
+<html lang="es">
 
-<h2>Registrar Nuevo Usuario</h2>
-<form action="../../php/user_conn.php" method="POST">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Usuarios</title>
+    <link rel="stylesheet" href="../../css_2/estilos.css">
+    <link rel="stylesheet" href="../../css_2/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../css_2/main.css">
+    <link rel="stylesheet" href="../../css_2/material.min.css">
+    <link rel="stylesheet" href="../../css_2/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../../css_2/normalize.css">
+    <link rel="stylesheet" href="../../css_2/sweetalert2.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="cargarApp()">
+    <!-- navBar -->
+<div class="full-width navBar">
+        <div class="full-width navBar-options">
+            <i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>
+            <div class="mdl-tooltip" for="btn-menu">Menu</div>
+            <nav class="navBar-options-list">
+                <ul class="list-unstyle">
+                    <li class="btn-Notification" id="notifications">
+                        <i class="zmdi zmdi-notifications"></i>
+                        <!-- <i class="zmdi zmdi-notifications-active btn-Notification" id="notifications"></i> -->
+                        <div class="mdl-tooltip" for="notifications">Notifications</div>
+                    </li>
+                    <li class="btn-exit" id="btn-exit">
+                        <i class="zmdi zmdi-power"></i>
+                        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+                    </li>
+                    <li class="text-condensedLight noLink"><small>Usuario</small></li>
+                    <li class="noLink">
+                        <figure>
+                            <img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
+                        </figure>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- navLateral -->
+<section class="full-width navLateral">
+        <div class="full-width navLateral-bg btn-menu"></div>
+    <div class="full-width navLateral-body">
+        <div class="full-width navLateral-body-logo text-center tittles">
+            <i class="zmdi zmdi-close btn-menu"></i>ADMINISTRACION</div>
+        <figure class="full-width" style="height: 77px;">
+            <div class="navLateral-body-cl">
+                <img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
+            </div>
+            <figcaption class="navLateral-body-cr hide-on-tablet">
+                <p>&nbsp;</p>
+                <p>ADMINISTRADOR</p>
+            </figcaption>
+        </figure>
+        <div class="full-width tittles navLateral-body-tittle-menu">
+            <i class="zmdi zmdi-desktop-mac"></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
+        </div>
+        <nav class="full-width">
+            <ul class="full-width list-unstyle menu-principal">
+                <li class="full-width">
+                    <a href="#" class="full-width">
+                        <div class="navLateral-body-cl">
+                            <i class="zmdi zmdi-view-dashboard"></i>
+                        </div>
+                        <div class="navLateral-body-cr hide-on-tablet">HORARIO</div>
+                    </a>
+                </li>
+                <li class="full-width divider-menu-h"></li>
+                <li class="full-width">
+                    <a href="egresos.html" class="full-width">
+                        <div class="navLateral-body-cl">
+                            <i class="zmdi zmdi-balance"></i>
+                        </div>
+                        <div class="navLateral-body-cr hide-on-tablet">GESTION PERFILES</div>
+                    </a>
+                </li>
+                <li class="full-width divider-menu-h"></li>
+                <li class="full-width">
+                    <a href="ingresos.html" class="full-width">
+                        <div class="navLateral-body-cl">
+                            <i class="zmdi zmdi-truck"></i>
+                        </div>
+                        <div class="navLateral-body-cr hide-on-tablet">GESTION MATERIAS</div>
+                    </a>
+                </li>
+                <li class="full-width divider-menu-h"></li>
+            </ul>
+        </nav>
+    </div>
+    </section>
+
+    <section class="full-width pageContent">
+        <section class="full-width text-center" style="padding: 40px 0;">
+            <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
+            <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
+            <form action="../../php/user_conn.php" method="POST" id="crearUsuarioForm">
     <label for="usuario">Usuario:</label>
-    <input type="text" id="usuario" name="usuario" required><br><br>
-
+    <input type="text" id="usuario" name="usuario" required><br>
     <label for="clave">Clave:</label>
-    <input type="password" id="clave" name="clave" required><br><br>
-
+    <input type="password" id="clave" name="clave" required><br>
     <label for="correo">Correo:</label>
-    <input type="email" id="correo" name="correo" required><br><br>
-
+    <input type="email" id="correo" name="correo" required><br>
     <label for="cedula">Cedula:</label>
-    <input type="number" id="cedula" name="cedula" required><br><br>
-
+    <input type="number" id="cedula" name="cedula" required><br>
     <label for="rol">Rol:</label>
     <select id="rol" name="rol">
         <option value="laboratorista">Laboratorista</option>
         <option value="docente">Docente</option>
         <option value="administrador">Administrador</option>
-        <option value="superior">Superior</option>
     </select><br><br>
-
     <input type="submit" value="Registrar Usuario">
 </form>
-<br><br>
+        </section>
+    </section>
+</body>
 
+</html>
