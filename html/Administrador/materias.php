@@ -92,7 +92,7 @@ try {
             <nav class="full-width">
                 <ul class="full-width list-unstyle menu-principal">
                     <li class="full-width">
-                        <a href="#" class="full-width">
+                        <a href="horario.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-view-dashboard"></i>
                             </div>
@@ -101,7 +101,7 @@ try {
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="egresos.html" class="full-width">
+                        <a href="usuarios.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-balance"></i>
                             </div>
@@ -110,7 +110,7 @@ try {
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="ingresos.html" class="full-width">
+                        <a href="#" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-truck"></i>
                             </div>

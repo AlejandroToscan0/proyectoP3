@@ -78,7 +78,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="usuarios.html" class="full-width">
+                        <a href="#" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-balance"></i>
                             </div>
@@ -87,7 +87,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="materias.html" class="full-width">
+                        <a href="materias.php" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-truck"></i>
                             </div>
@@ -105,6 +105,8 @@
             <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
             <form action="../../php/user_conn.php" method="POST" id="crearUsuarioForm">
+                <label for="usuario">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br>
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required><br>
                 <label for="clave">Clave:</label>
