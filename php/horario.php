@@ -141,7 +141,7 @@
         }
         echo "<br> PERFILES <br>";
         foreach ($perfiles as $perfil) {
-            echo "ID: " . $perfil['id'] . ", USUARIO: " . $perfil['usuario'] . ", PASSWORD: " . $perfil['password'] . ", ROL: " . $perfil['rol'] . ", CORREO: " . $perfil['correo'] . ", CEDULA: " . $perfil['cedula'] . "<br>";
+            echo "ID: " . $perfil['id'] . ", Nombre: " . $perfil['nombre'] . ", USUARIO: " . $perfil['usuario'] . ", PASSWORD: " . $perfil['password'] . ", ROL: " . $perfil['rol'] . ", CORREO: " . $perfil['correo'] . ", CEDULA: " . $perfil['cedula'] . "<br>";
         }
     
     } catch (PDOException $e) {
