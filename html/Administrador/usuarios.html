@@ -1,7 +1,3 @@
-<!-- CREAR NUEVO USUARIO -->
-<!-- 
-* Copyright 2016 Carlos Eduardo Alfaro Orellana
--->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -18,24 +14,35 @@
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
+
+    <script src="../../js/material.min.js"></script>
+    <script src="../../js/sweetalert2.min.js"></script>
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../js/main(1).js"></script>
+
+    <!-- Agregamos una fuente de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
 </head>
 
 <body onload="cargarApp()">
     <!-- navBar -->
     <div class="full-width navBar">
         <div class="full-width navBar-options">
-            <i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>
+            <i class='bx bx-menu btn-menu' id="btn-menu"></i>
             <div class="mdl-tooltip" for="btn-menu">Menu</div>
             <nav class="navBar-options-list">
                 <ul class="list-unstyle">
                     <li class="btn-Notification" id="notifications">
-                        <i class="zmdi zmdi-notifications"></i>
+                        <i class='bx bx-bell'></i>
                         <!-- <i class="zmdi zmdi-notifications-active btn-Notification" id="notifications"></i> -->
                         <div class="mdl-tooltip" for="notifications">Notifications</div>
                     </li>
-                    <li class="btn-exit" id="btn-exit">
-                        <i class="zmdi zmdi-power"></i>
-                        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+                   <li class="btn-exit" id="btn-exit">
+    <a href="salida_sislog.php">
+        <i class='bx bx-log-out'></i>
+        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+    </a>
+</li>
                     </li>
                     <li class="text-condensedLight noLink"><small>Usuario</small></li>
                     <li class="noLink">
@@ -52,7 +59,7 @@
         <div class="full-width navLateral-bg btn-menu"></div>
         <div class="full-width navLateral-body">
             <div class="full-width navLateral-body-logo text-center tittles">
-                <i class="zmdi zmdi-close btn-menu"></i>ADMINISTRACION
+                <i class='bx bx-x btn-menu'></i>ADMINISTRACION
             </div>
             <figure class="full-width" style="height: 77px;">
                 <div class="navLateral-body-cl">
@@ -64,14 +71,14 @@
                 </figcaption>
             </figure>
             <div class="full-width tittles navLateral-body-tittle-menu">
-                <i class="zmdi zmdi-desktop-mac"></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
+                <i class='bx bx-desktop'></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
             </div>
             <nav class="full-width">
                 <ul class="full-width list-unstyle menu-principal">
                     <li class="full-width">
                         <a href="horario.php" class="full-width">
                             <div class="navLateral-body-cl">
-                                <i class="zmdi zmdi-view-dashboard"></i>
+                                <i class='bx bx-home'></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">HORARIO</div>
                         </a>
@@ -80,7 +87,7 @@
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl">
-                                <i class="zmdi zmdi-balance"></i>
+                                <i class='bx bx-user'></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERFILES</div>
                         </a>
@@ -89,7 +96,7 @@
                     <li class="full-width">
                         <a href="materias.php" class="full-width">
                             <div class="navLateral-body-cl">
-                                <i class="zmdi zmdi-truck"></i>
+                                <i class='bx bx-book'></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">GESTION MATERIAS</div>
                         </a>
@@ -105,7 +112,7 @@
             <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
             <form action="../../php/user_conn.php" method="POST" id="crearUsuarioForm">
-                <label for="usuario">Nombre:</label>
+                <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required><br>
                 <label for="usuario">Usuario:</label>
                 <input type="text" id="usuario" name="usuario" required><br>
@@ -117,9 +124,9 @@
                 <input type="number" id="cedula" name="cedula" required><br>
                 <label for="rol">Rol:</label><br>
                 <select id="rol" name="rol">
-                    <option value="administrador">Administrador</option>
-                    <option value="docente">Docente</option>
-                    <option value="laboratorista">Laboratorista</option>
+                    <option value="administrador">Administrador <i class='bx bx-user'></i></option>
+                    <option value="docente">Docente <i class='bx bx-book-reader'></i></option>
+                    <option value="laboratorista">Laboratorista <i class='bx bx-flask'></i></option>
                 </select><br><br>
                 <input type="submit" value="Registrar Usuario">
             </form>

@@ -42,24 +42,34 @@ try {
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
+	
+	 <script src="../../js/material.min.js"></script>
+    <script src="../../js/sweetalert2.min.js"></script>
+    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="../../js/main(1).js"></script>
+
+    <!-- Agregamos una fuente de iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
 </head>
 
 <body onload="cargarApp()">
     <!-- navBar -->
     <div class="full-width navBar">
         <div class="full-width navBar-options">
-            <i class="zmdi zmdi-more-vert btn-menu" id="btn-menu"></i>
+            <i class="bx bx-menu btn-menu" id="btn-menu"></i>
             <div class="mdl-tooltip" for="btn-menu">Menu</div>
             <nav class="navBar-options-list">
                 <ul class="list-unstyle">
                     <li class="btn-Notification" id="notifications">
-                        <i class="zmdi zmdi-notifications"></i>
+                        <i class="bx bx-bell"></i>
                         <div class="mdl-tooltip" for="notifications">Notifications</div>
                     </li>
-                    <li class="btn-exit" id="btn-exit">
-                        <i class="zmdi zmdi-power"></i>
-                        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
-                    </li>
+                   <li class="btn-exit" id="btn-exit">
+    <a href="salida_sislog.php">
+        <i class='bx bx-log-out'></i>
+        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+    </a>
+</li>
                     <li class="text-condensedLight noLink"><small>Usuario</small></li>
                     <li class="noLink">
                         <figure>
@@ -75,7 +85,7 @@ try {
         <div class="full-width navLateral-bg btn-menu"></div>
         <div class="full-width navLateral-body">
             <div class="full-width navLateral-body-logo text-center tittles">
-                <i class="zmdi zmdi-close btn-menu"></i>ADMINISTRACION
+                <i class="bx bx-x btn-menu"></i>ADMINISTRACION
             </div>
             <figure class="full-width" style="height: 77px;">
                 <div class="navLateral-body-cl">
@@ -87,14 +97,14 @@ try {
                 </figcaption>
             </figure>
             <div class="full-width tittles navLateral-body-tittle-menu">
-                <i class="zmdi zmdi-desktop-mac"></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
+                <i class="bx bx-desktop"></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
             </div>
             <nav class="full-width">
                 <ul class="full-width list-unstyle menu-principal">
                     <li class="full-width">
                         <a href="horario.php" class="full-width">
                             <div class="navLateral-body-cl">
-                                <i class="zmdi zmdi-view-dashboard"></i>
+                                <i class="bx bx-calendar"></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">HORARIO</div>
                         </a>
@@ -103,7 +113,7 @@ try {
                     <li class="full-width">
                         <a href="usuarios.html" class="full-width">
                             <div class="navLateral-body-cl">
-                                <i class="zmdi zmdi-balance"></i>
+                                <i class="bx bx-user"></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERFILES</div>
                         </a>
@@ -112,7 +122,7 @@ try {
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl">
-                                <i class="zmdi zmdi-truck"></i>
+                                <i class="bx bx-book"></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">GESTION MATERIAS</div>
                         </a>
