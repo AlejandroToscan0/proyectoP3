@@ -7,7 +7,7 @@
 </head>
 <body>
 <?php 
-    include('../../php/horario.php');    
+    include('../../php/horarioConn.php');    
 ?>
 </body>
 </html>

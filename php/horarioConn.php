@@ -129,7 +129,7 @@
 
     // Perfiles
     try {
-        $query = "SELECT * FROM perfil";
+        $query = "SELECT * FROM perfil WHERE rol = 'docente'";
     
         $statement = $conn->prepare($query);
         $statement->execute();
@@ -147,7 +147,5 @@
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
-
-
     
 ?>
