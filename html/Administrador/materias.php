@@ -92,7 +92,7 @@ try {
             <nav class="full-width">
                 <ul class="full-width list-unstyle menu-principal">
                     <li class="full-width">
-                        <a href="horario.html" class="full-width">
+                        <a href="horario.php" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-view-dashboard"></i>
                             </div>
