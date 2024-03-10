@@ -30,8 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Verificar si la contraseña ingresada coincide con la contraseña almacenada
         if ($clave == $password_from_db) {
             // Iniciar sesión y almacenar el nombre de usuario en la variable de sesión
-            $_SESSION['usuario'] = $usuario;
-
+            $_SESSION['id'] = $result['id'];
+            $_SESSION['nombre'] = $result['nombre'];
+            $_SESSION['usuario'] = $result['usuario'];
+            $_SESSION['rol'] = $result['rol'];
+            
             if ($result['rol'] == 'administrador') {
                 header("Location: ../html/administrador/administrador.html");
             } elseif ($result['rol'] == 'docente') {

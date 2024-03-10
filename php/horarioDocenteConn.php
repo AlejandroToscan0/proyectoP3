@@ -1,5 +1,12 @@
 <?php 
     include('conexion.php');
+    session_start(); 
+
+    $usuario = $_SESSION['usuario'];
+    $id = $_SESSION['id'];
+    $nombre = $_SESSION['nombre'];
+    $rol = $_SESSION['rol'];
+    echo "Usuarioss: $usuario, IDsss: $id, Nombre: $nombre, Rol: $rol";
 
     // DEPARTAMENTOS
     try {
@@ -17,7 +24,9 @@
         foreach ($departamentos as $departamento) {
             echo "ID_DEP: " . $departamento['ID_DEP'] . ", NOMBRE_DEP: " . $departamento['NOMBRE_DEP'] . "<br>";
         }
-    
+        
+        
+
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
     }
