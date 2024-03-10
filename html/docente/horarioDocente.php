@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Seleccionar la materia que quire dar</h1>
 <?php 
     include('../../php/horarioDocenteConn.php');    
 ?>
