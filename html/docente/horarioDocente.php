@@ -14,7 +14,7 @@
     <select id="materiaSelected" name="materiaSelected">
         <option value="">Seleccione una materia</option>
         <?php foreach ($materias as $materia) : ?>
-            <option value="<?php echo $materia['ID_MATERIA']; ?>" <?php if ($materia['ID_MATERIA'] == $materiaSeleccionada) echo 'selected="selected"'; ?>>
+            <option value="<?php echo $materia['NOMBRE_MATERIA']; ?>" <?php if ($materia['NOMBRE_MATERIA'] == $materiaSeleccionada) echo 'selected="selected"'; ?>>
                 <?php echo $materia['NOMBRE_MATERIA']; ?>
             </option>
         <?php endforeach; ?>
