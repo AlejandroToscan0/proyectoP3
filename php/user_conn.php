@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $statement->execute(array(':nombre' => $nombre, ':usuario' => $usuario, ':clave' => $clave, ':correo' => $correo, ':rol' => $rol, ':cedula' => $cedula));
 
-        header("Location: ../index.php");
+        header("Location: ../html\Administrador\usuarios.html");
     } catch (PDOException $e) {
         // Manejar errores de inserción
         echo "Error al insertar usuario: " . $e->getMessage();
