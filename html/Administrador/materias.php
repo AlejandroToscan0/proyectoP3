@@ -1,3 +1,31 @@
+<?php
+include('../../php/conexion.php');
+
+// Consulta SQL para obtener los valores de las tablas relevantes
+$query_carreras = "SELECT ID_CARRERA FROM carrera";
+$query_franjas = "SELECT ID_FRANJA FROM franja_horaria";
+$query_labs = "SELECT ID_LAB FROM laboratorio";
+
+try {
+    // Preparar y ejecutar la consulta para carreras
+    $statement_carreras = $conn->prepare($query_carreras);
+    $statement_carreras->execute();
+    $carreras = $statement_carreras->fetchAll(PDO::FETCH_ASSOC);
+
+    // Preparar y ejecutar la consulta para franjas horarias
+    $statement_franjas = $conn->prepare($query_franjas);
+    $statement_franjas->execute();
+    $franjas = $statement_franjas->fetchAll(PDO::FETCH_ASSOC);
+
+    // Preparar y ejecutar la consulta para laboratorios
+    $statement_labs = $conn->prepare($query_labs);
+    $statement_labs->execute();
+    $labs = $statement_labs->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    // Manejar errores de consulta
+    echo "Error al consultar la base de datos: " . $e->getMessage();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -64,7 +92,7 @@
             <nav class="full-width">
                 <ul class="full-width list-unstyle menu-principal">
                     <li class="full-width">
-                        <a href="horario.html" class="full-width">
+                        <a href="#" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-view-dashboard"></i>
                             </div>
@@ -73,7 +101,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="usuarios.html" class="full-width">
+                        <a href="egresos.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-balance"></i>
                             </div>
@@ -82,7 +110,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="materias.html" class="full-width">
+                        <a href="ingresos.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class="zmdi zmdi-truck"></i>
                             </div>
@@ -101,21 +129,45 @@
             <!-- Formulario para agregar nueva materia -->
             <form action="../../php/subject_conn.php" method="post" id="agregarMateriaForm">
                 <label for="id_materia">ID Materia:</label>
-                <input type="text" id="id_materia" name="id_materia" required><br>
+                <select name="id_materia" id="id_materia" required>
+                    <?php foreach ($franjas as $franja) : ?>
+                        <option value="<?php echo $franja['ID_FRANJA']; ?>">
+                            <?php echo $franja['ID_FRANJA']; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select><br>
 
                 <label for="id_franja">ID Franja:</label>
-                <input type="text" id="id_franja" name="id_franja" required><br>
+                <select name="id_franja" id="id_franja" required>
+                    <?php foreach ($franjas as $franja) : ?>
+                        <option value="<?php echo $franja['ID_FRANJA']; ?>">
+                            <?php echo $franja['ID_FRANJA']; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select><br>
 
                 <label for="id_lab">ID Laboratorio:</label>
-                <input type="text" id="id_lab" name="id_lab" required><br>
+                <select name="id_lab" id="id_lab" required>
+                    <?php foreach ($labs as $lab) : ?>
+                        <option value="<?php echo $lab['ID_LAB']; ?>">
+                            <?php echo $lab['ID_LAB']; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select><br>
 
                 <label for="id_carrera">ID Carrera:</label>
-                <input type="text" id="id_carrera" name="id_carrera" required><br>
+                <select name="id_carrera" id="id_carrera" required>
+                    <?php foreach ($carreras as $carrera) : ?>
+                        <option value="<?php echo $carrera['ID_CARRERA']; ?>">
+                            <?php echo $carrera['ID_CARRERA']; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select><br>
 
                 <label for="nombre_materia">Nombre Materia:</label>
                 <input type="text" id="nombre_materia" name="nombre_materia" required><br>
 
-                <label for="Nrc">NRC:</label>
+                <label for="Nrc">NRC:</label><br>
                 <input type="text" id="Nrc" name="Nrc" required><br>
 
                 <label for="docente_acargo">Docente a Cargo:</label>

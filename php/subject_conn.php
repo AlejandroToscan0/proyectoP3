@@ -19,12 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $statement = $conn->prepare($query);
 
         $statement->execute(array(
-            ':idMateria' => $idMateria, 
-            ':idFranja' => $idFranja, 
-            ':idLab' => $idLab, 
-            ':idCarrera' => $idCarrera, 
-            ':nombreMateria' => $nombreMateria, 
-            ':nrc' => $nrc, 
+            ':idMateria' => $idMateria,
+            ':idFranja' => $idFranja,
+            ':idLab' => $idLab,
+            ':idCarrera' => $idCarrera,
+            ':nombreMateria' => $nombreMateria,
+            ':nrc' => $nrc,
             ':docenteAcargo' => $docenteAcargo
         ));
         header("Location: ../index.php");
