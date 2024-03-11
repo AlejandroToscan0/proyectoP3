@@ -42,8 +42,8 @@ try {
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
-	
-	 <script src="../../js/material.min.js"></script>
+    <link rel="stylesheet" href="../../css/boton.css">
+    <script src="../../js/material.min.js"></script>
     <script src="../../js/sweetalert2.min.js"></script>
     <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../js/main(1).js"></script>
@@ -64,12 +64,12 @@ try {
                         <i class="bx bx-bell"></i>
                         <div class="mdl-tooltip" for="notifications">Notifications</div>
                     </li>
-                   <li class="btn-exit" id="btn-exit">
-    <a href="salida_sislog.php">
-        <i class='bx bx-log-out'></i>
-        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
-    </a>
-</li>
+                    <li class="btn-exit" id="btn-exit">
+                        <a href="salida_sislog.php">
+                            <i class='bx bx-log-out'></i>
+                            <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+                        </a>
+                    </li>
                     <li class="text-condensedLight noLink"><small>Usuario</small></li>
                     <li class="noLink">
                         <figure>
@@ -194,6 +194,8 @@ try {
 
                 <input type="submit" value="Agregar Materia">
             </form>
+            <button class="logout-button" onclick="location.href='administrador.html'">
+                <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
 </body>

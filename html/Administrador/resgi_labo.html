@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="../../css/boton.css">
     <script src="../../js/material.min.js"></script>
     <script src="../../js/sweetalert2.min.js"></script>
     <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -156,19 +156,23 @@
             <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR LABORATORIO</h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
             <form action="../../php/docen_conn.php" method="POST" id="crearUsuarioForm">
-              <p>
-                  <label for="textfield">Id Laboratorio:</label>
-                  <input type="text" name="id_name" id="id_name" required><br>
-                <label for="textfield">Laboratorio:</label>
-                <input type="text" name="lab" id="lab" required><br>
-              </p>
                 <p>
-                  <input type="submit" value="Registrar Laboratorio">
-              </p>
+                    <label for="textfield">Id Laboratorio:</label>
+                    <input type="text" name="id_name" id="id_name" required><br>
+                    <label for="textfield">Laboratorio:</label>
+                    <input type="text" name="lab" id="lab" required><br>
+                </p>
+                <p>
+                    <input type="submit" value="Registrar Laboratorio">
+                </p>
             </form>
+            <button class="logout-button" onclick="location.href='administrador.html'">
+                <i class="fas fa-backward fa-2x"></i></button>
         </section>
+
     </section>
-	<script> 
+
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Función para cerrar sesión y redirigir al index
             function logout() {
@@ -194,8 +198,7 @@
             });
         });
     </script>
-	
+
 </body>
 
 </html>
-

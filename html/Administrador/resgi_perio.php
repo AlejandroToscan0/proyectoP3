@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="../../css/boton.css">
     <script src="../../js/material.min.js"></script>
     <script src="../../js/sweetalert2.min.js"></script>
     <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -156,21 +156,23 @@
             <h1 class="text-center tittles2" style="color: #31470b;">PERIODO ACADEMICO </h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
             <form action="../../php/docen_conn.php" method="POST" id="crearUsuarioForm">
-              <p>
-                  <label for="titulo">Id Periodo:</label><br>
-            <input type="text" name="idped" id="idped" required><br><br>
-                <label for="textfield">Nombre Periodo:</label>
-                <br>
-                <input type="text" name="perio" id="perio" required><br><br>
-              </p>
                 <p>
-                  <input type="submit" value="Registrar Periodo">
-              </p>
-          </form>
+                    <label for="titulo">Id Periodo:</label><br>
+                    <input type="text" name="idped" id="idped" required><br><br>
+                    <label for="textfield">Nombre Periodo:</label>
+                    <br>
+                    <input type="text" name="perio" id="perio" required><br><br>
+                </p>
+                <p>
+                    <input type="submit" value="Registrar Periodo">
+                </p>
+            </form>
+            <button class="logout-button" onclick="location.href='administrador.html'">
+                <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
-	<script> 
-        document.addEventListener('DOMContentLoaded', function () {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             // Función para cerrar sesión y redirigir al index
             function logout() {
                 // Realizar aquí las acciones de cierre de sesión (limpiar cookies, eliminar tokens, etc.)
@@ -184,19 +186,19 @@
             var navLateral = document.querySelector('.navLateral');
             var btnLogout = document.getElementById('btn-exit');
 
-            btnMenu.addEventListener('click', function () {
+            btnMenu.addEventListener('click', function() {
                 navLateral.classList.toggle('closed');
             });
 
             // Agregar evento de clic al botón de logout
-            btnLogout.addEventListener('click', function (event) {
+            btnLogout.addEventListener('click', function(event) {
                 event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
                 logout(); // Llamar a la función logout al hacer clic en el botón de logout
             });
         });
-    </script></script>
-	
+    </script>
+    </script>
+
 </body>
 
 </html>
-

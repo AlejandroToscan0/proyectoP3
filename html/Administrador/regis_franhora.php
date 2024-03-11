@@ -29,9 +29,8 @@ try {
     <link rel="stylesheet" href="../../css_2/normalize.css">
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    
-	
-	 <script src="../../js/material.min.js"></script>
+    <link rel="stylesheet" href="../../css/boton.css">
+    <script src="../../js/material.min.js"></script>
     <script src="../../js/sweetalert2.min.js"></script>
     <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../js/main(1).js"></script>
@@ -53,12 +52,12 @@ try {
                         <i class="bx bx-bell"></i>
                         <div class="mdl-tooltip" for="notifications">Notifications</div>
                     </li>
-                   <li class="btn-exit" id="btn-exit">
-    <a href="salida_sislog.php">
-        <i class='bx bx-log-out'></i>
-        <div class="mdl-tooltip" for="btn-exit">LogOut</div>
-    </a>
-</li>
+                    <li class="btn-exit" id="btn-exit">
+                        <a href="salida_sislog.php">
+                            <i class='bx bx-log-out'></i>
+                            <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+                        </a>
+                    </li>
                     <li class="text-condensedLight noLink"><small>Usuario</small></li>
                     <li class="noLink">
                         <figure>
@@ -171,35 +170,37 @@ try {
         <section class="full-width text-center" style="padding: 40px 0;">
             <h2 class="text-center tittles2" style="color: #31470b;">AGREGAR Franja Horaria</h2>
             <!-- Formulario para agregar nueva materia -->
-          <form action="../../php/franja_horac.php" method="post" id="agregarFranjaHorForm">
+            <form action="../../php/franja_horac.php" method="post" id="agregarFranjaHorForm">
                 <p>
-                  <label for="id_periodo">ID Periodo:</label>
-                  <br>
-                  <select name="id_periodo" id="id_periodo" required>
-                    <?php foreach ($periodos as $periodo) : ?>
-                    <option value="<?php echo $periodo['ID_PERIODO']; ?>">
-                      <?php echo $periodo['ID_PERIODO']; ?>
-                    </option>
-                    <?php endforeach; ?>
-                  </select>
-                  <br>
-                  
-                  <label for="time">Hora Inicio:</label><br>
-                  <input type="time" name="time1" id="time1" required><br>
-                  <label for="time2">Hora Final:</label><br>
-                  <input type="time" name="time2" id="time2" required><br>
-                  <label for="textfield">Dias:</label><br>
-                  <input type="text" name="dias" id="dias" required>
-                  <br>
-                  <br>
-                  
-                  <input type="submit" value="Agregar Franja Horaria">
+                    <label for="id_periodo">ID Periodo:</label>
+                    <br>
+                    <select name="id_periodo" id="id_periodo" required>
+                        <?php foreach ($periodos as $periodo) : ?>
+                            <option value="<?php echo $periodo['ID_PERIODO']; ?>">
+                                <?php echo $periodo['ID_PERIODO']; ?>
+                            </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <br>
+
+                    <label for="time">Hora Inicio:</label><br>
+                    <input type="time" name="time1" id="time1" required><br>
+                    <label for="time2">Hora Final:</label><br>
+                    <input type="time" name="time2" id="time2" required><br>
+                    <label for="textfield">Dias:</label><br>
+                    <input type="text" name="dias" id="dias" required>
+                    <br>
+                    <br>
+
+                    <input type="submit" value="Agregar Franja Horaria">
                 </p>
             </form>
+            <button class="logout-button" onclick="location.href='administrador.html'">
+                <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
-	<script> 
-        document.addEventListener('DOMContentLoaded', function () {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             // Función para cerrar sesión y redirigir al index
             function logout() {
                 // Realizar aquí las acciones de cierre de sesión (limpiar cookies, eliminar tokens, etc.)
@@ -213,12 +214,12 @@ try {
             var navLateral = document.querySelector('.navLateral');
             var btnLogout = document.getElementById('btn-exit');
 
-            btnMenu.addEventListener('click', function () {
+            btnMenu.addEventListener('click', function() {
                 navLateral.classList.toggle('closed');
             });
 
             // Agregar evento de clic al botón de logout
-            btnLogout.addEventListener('click', function (event) {
+            btnLogout.addEventListener('click', function(event) {
                 event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
                 logout(); // Llamar a la función logout al hacer clic en el botón de logout
             });

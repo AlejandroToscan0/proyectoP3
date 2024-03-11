@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="../../css/boton.css">
     <script src="../../js/material.min.js"></script>
     <script src="../../js/sweetalert2.min.js"></script>
     <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
@@ -156,25 +156,27 @@
             <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NOVEDADES</h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
             <form action="../../php/docen_conn.php" method="POST" id="crearUsuarioForm">
-              <p>
-                  <label for="titulo">Título de la Novedad:</label><br>
-            <input type="text" name="titulo" id="titulo" required><br>
-            <label for="datetime">Fecha y Hora:</label><br>
-            <input type="datetime" name="fech" id="fech" required><br>
-                <label for="textfield">Responsable:</label><br>
-                <input type="text" name="textfield" id="textfield" required><br>
-                <label for="descripcion">Descripción:</label><br>
-                <textarea name="descrip" id="descr" rows="4" cols="40" required></textarea><br>
-                <label for="textfield2">Laboratorio:</label><br>
-                <input type="text" name="lab1" id="lab1" required><br>
-              </p>
                 <p>
-                  <input type="submit" value="Registrar Novedad">
-              </p>
-          </form>
+                    <label for="titulo">Título de la Novedad:</label><br>
+                    <input type="text" name="titulo" id="titulo" required><br>
+                    <label for="datetime">Fecha y Hora:</label><br>
+                    <input type="datetime" name="fech" id="fech" required><br>
+                    <label for="textfield">Responsable:</label><br>
+                    <input type="text" name="textfield" id="textfield" required><br>
+                    <label for="descripcion">Descripción:</label><br>
+                    <textarea name="descrip" id="descr" rows="4" cols="40" required></textarea><br>
+                    <label for="textfield2">Laboratorio:</label><br>
+                    <input type="text" name="lab1" id="lab1" required><br>
+                </p>
+                <p>
+                    <input type="submit" value="Registrar Novedad">
+                </p>
+            </form>
+            <button class="logout-button" onclick="location.href='administrador.html'">
+                <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
-	<script> 
+    <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Función para cerrar sesión y redirigir al index
             function logout() {
@@ -199,9 +201,9 @@
                 logout(); // Llamar a la función logout al hacer clic en el botón de logout
             });
         });
-    </script></script>
-	
+    </script>
+    </script>
+
 </body>
 
 </html>
-
