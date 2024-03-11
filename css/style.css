@@ -7,21 +7,23 @@ http://www.tooplate.com/view/2097-pop
 */
 
 body {
-	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 19px;
-	font-weight: 300;
-    color:white !important;        
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    color: white !important;
     position: relative;
 }
 
-h1 { font-size: 2.8rem; }
+h1 {
+    font-size: 2.8rem;
+}
 
 #tm-bg {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;  
+    height: 100%;
     background-image: url(../img/pop-bg.jpg) !important;
     background-position: center;
     background-size: cover;
@@ -53,9 +55,9 @@ p {
 }
 
 .tm-main-content {
-    display: flex;    
+    display: flex;
     align-items: center;
-    padding: 50px 15px; 
+    padding: 50px 15px;
     position: absolute;
     left: 0;
     right: 0;
@@ -77,18 +79,18 @@ p {
 
 .tm-nav ul {
     padding-left: 0;
-    display: block;    
+    display: block;
 }
 
-.tm-nav li { 
-    list-style: none; 
+.tm-nav li {
+    list-style: none;
     display: inline-block;
     border: 1px solid white;
     float: left;
     margin: 10px;
 }
 
-.tm-nav-link { 
+.tm-nav-link {
     color: white;
     display: flex;
     flex-direction: column;
@@ -108,7 +110,9 @@ p {
     bottom: 10px;
 }
 
-.fa-3x { font-size: 2.5em; }
+.fa-3x {
+    font-size: 2.5em;
+}
 
 .product {
     background: transparent;
@@ -120,19 +124,29 @@ p {
     color: #a9a9a9;
 }
 
-.tm-nav-icon {    
+.tm-nav-icon {
     display: block;
     margin-bottom: 25px;
 }
 
 /* Expanding Grid Items from Codrops */
-.tm-page-title { font-weight: 300; }
-.content { max-width: 370px; }
+.tm-page-title {
+    font-weight: 300;
+}
+
+.content {
+    max-width: 370px;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
 }
-.grid__item { margin: 10px; }
+
+.grid__item {
+    margin: 10px;
+}
+
 .product {
     position: relative;
     cursor: pointer;
@@ -158,10 +172,12 @@ p {
     display: none;
 }
 
-.tm-fa-close { font-size: 30px; }
+.tm-fa-close {
+    font-size: 30px;
+}
 
 .details {
-    font-size: 1rem;    
+    font-size: 1rem;
     width: 100%;
     height: 100%;
     bottom: 0;
@@ -171,16 +187,18 @@ p {
     flex-direction: column;
     justify-content: center;
     pointer-events: none;
-    padding: 15px;   
-    display: none; 
+    padding: 15px;
+    display: none;
 }
 
-.details > * {
+.details>* {
     position: relative;
     opacity: 0;
 }
 
-.details--open { pointer-events: auto; }
+.details--open {
+    pointer-events: auto;
+}
 
 .details__bg {
     width: 100%;
@@ -191,7 +209,9 @@ p {
     margin-right: auto;
 }
 
-.details__bg--down { background: #2c2a35; }
+.details__bg--down {
+    background: #2c2a35;
+}
 
 .details__bg {
     padding: 50px;
@@ -212,7 +232,9 @@ p {
 }
 
 /* Team */
-.tm-reverse-sm { flex-direction: row; }
+.tm-reverse-sm {
+    flex-direction: row;
+}
 
 /* Our Work */
 .tm-slider-img {
@@ -257,9 +279,13 @@ p {
     border-color: transparent;
 }
 
-.tm-col-email { padding-left: 0; }
+.tm-col-email {
+    padding-left: 0;
+}
 
-.tm-btn-submit { background-color: #006599; }
+.tm-btn-submit {
+    background-color: #006599;
+}
 
 .tm-btn-gray {
     background-color: #494752;
@@ -277,7 +303,9 @@ p {
     border-radius: 0;
 }
 
-.btn-primary { border-color: transparent; }
+.btn-primary {
+    border-color: transparent;
+}
 
 .btn-primary:hover {
     background-color: #0e7fb9;
@@ -287,15 +315,24 @@ p {
 /* Footer */
 footer {
     position: absolute;
-    bottom: 30px;    
+    bottom: 30px;
     text-align: center;
     left: 0;
-    right: 0;   
+    right: 0;
 }
 
-.tm-text-highlight { color: white; }
-.tm-text-highlight:hover { color: red; }
-.tm-main-content.tm-footer-relative { flex-direction: column; } 
+.tm-text-highlight {
+    color: white;
+}
+
+.tm-text-highlight:hover {
+    color: red;
+}
+
+.tm-main-content.tm-footer-relative {
+    flex-direction: column;
+}
+
 .tm-main-content.tm-footer-relative footer {
     position: relative;
     bottom: 0;
@@ -303,25 +340,34 @@ footer {
 }
 
 .tm-copyright-text {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     display: inline-block;
     padding: 10px 30px;
 }
 
-a, button { transition: all 0.3s ease; }
+a,
+button {
+    transition: all 0.3s ease;
+}
+
 a:hover,
 a:focus {
-	text-decoration: none;
-	outline: none;
+    text-decoration: none;
+    outline: none;
 }
 
-p:last-child { margin-bottom: 0; }
+p:last-child {
+    margin-bottom: 0;
+}
 
 @media (min-width: 900px) {
-    .container { max-width: 900px; }
+    .container {
+        max-width: 900px;
+    }
 }
 
-@media (min-width: 767px) and (max-width: 991px), (max-width: 440px) {
+@media (min-width: 767px) and (max-width: 991px),
+(max-width: 440px) {
     .tm-nav-link {
         width: 145px;
         height: 145px;
@@ -329,25 +375,46 @@ p:last-child { margin-bottom: 0; }
 }
 
 @media (max-width: 767px) {
-    .container { max-width: 450px; }
+    .container {
+        max-width: 450px;
+    }
+
     .content {
         margin-left: auto;
         margin-right: 0;
     }
+
     .tm-nav ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
     }
-    .grid { justify-content: flex-end; }
-    .tm-col-email { padding-left: 15px; }
-    .tm-reverse-sm { flex-direction: column-reverse; }
+
+    .grid {
+        justify-content: flex-end;
+    }
+
+    .tm-col-email {
+        padding-left: 15px;
+    }
+
+    .tm-reverse-sm {
+        flex-direction: column-reverse;
+    }
 }
 
-@media (max-width: 544px) {    
-    .tm-main-content { flex-direction: column; }
-    .details__bg { padding: 55px 40px; }
-    .slick-dots li button:before { font-size: 15px; }
+@media (max-width: 544px) {
+    .tm-main-content {
+        flex-direction: column;
+    }
+
+    .details__bg {
+        padding: 55px 40px;
+    }
+
+    .slick-dots li button:before {
+        font-size: 15px;
+    }
 
     footer {
         position: relative;
@@ -361,9 +428,24 @@ p:last-child { margin-bottom: 0; }
         height: 120px;
     }
 
-    .fa-3x { font-size: 2.2em; }
+    .fa-3x {
+        font-size: 2.2em;
+    }
 }
 
 a {
     text-decoration: none;
+}
+
+.logout-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: red;
 }

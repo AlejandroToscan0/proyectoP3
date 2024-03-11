@@ -1,0 +1,88 @@
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th,
+td {
+    border: 1px solid #e9e9e9;
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+th:first-child,
+td:first-child {
+    width: 60px;
+}
+
+th:last-child,
+td:last-child {
+    width: 100px;
+}
+
+/* Estilos para los enlaces de eliminar y editar */
+a {
+    font-weight: bold;
+    color: #566787;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    background-color: #f0f0f0;
+}
+
+a.editar {
+    color: #FFC107;
+}
+
+a.eliminar {
+    color: #F44336;
+}
+
+/* Estilos para el formulario de edición */
+#editarForm {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#editarForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#editarForm input[type="text"],
+#editarForm input[type="password"],
+#editarForm select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#editarForm input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+#editarForm input[type="submit"]:hover {
+    background-color: #218838;
+}
