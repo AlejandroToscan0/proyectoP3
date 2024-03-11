@@ -128,6 +128,15 @@ try {
                         </a>
                     </li>
                     <li class="full-width divider-menu-h"></li>
+                    <li class="full-width">
+                        <a href="gestionUsuarios.php" class="full-width">
+                            <div class="navLateral-body-cl">
+                                <i class='bx bx-book'></i>
+                            </div>
+                            <div class="navLateral-body-cr hide-on-tablet">Ver usaurios</div>
+                        </a>
+                    </li>
+                    <li class="full-width divider-menu-h"></li>
                 </ul>
             </nav>
         </div>
