@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Registro Laboratorio</title>
+    <title>Registro Novedades</title>
     <link rel="stylesheet" href="../../css_2/estilos.css">
     <link rel="stylesheet" href="../../css_2/jquery.mCustomScrollbar.css">
     <link rel="stylesheet" href="../../css_2/main.css">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../css_2/normalize.css">
     <link rel="stylesheet" href="../../css_2/sweetalert2.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
-    <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
+    
 
     <script src="../../js/material.min.js"></script>
     <script src="../../js/sweetalert2.min.js"></script>
@@ -22,6 +22,7 @@
 
     <!-- Agregamos una fuente de iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+    <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
 </head>
 
 <body onload="cargarApp()">
@@ -58,15 +59,14 @@
         <div class="full-width navLateral-bg btn-menu"></div>
         <div class="full-width navLateral-body">
             <div class="full-width navLateral-body-logo text-center tittles">
-                <i class='bx bx-x btn-menu'></i>ADMIN
-            </div>
+                <i class='bx bx-x btn-menu'></i>Docent</div>
             <figure class="full-width" style="height: 77px;">
                 <div class="navLateral-body-cl">
                     <img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
                 </div>
                 <figcaption class="navLateral-body-cr hide-on-tablet">
                     <p>&nbsp;</p>
-                    <p>ADMINISTRADOR</p>
+                    <p>Docente</p>
                 </figcaption>
             </figure>
             <div class="full-width tittles navLateral-body-tittle-menu">
@@ -84,61 +84,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bx-user'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">USUARIO</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="materias.php" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bx-book'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">MATERIA</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bx-user'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">DOCENTE</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bx-time'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">PERIODO</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bx-time-five'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">FRAN.HORARIA</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bxl-flask'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">LABORATORIO</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
+                        <a href="../docente/regis_nov.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class='bx bx-news'></i>
                             </div>
@@ -155,7 +101,7 @@
         <section class="full-width text-center" style="padding: 40px 0;">
             <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NOVEDADES</h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
-            <form action="../../php/docen_conn.php" method="POST" id="crearUsuarioForm">
+            <form action="guar_nove.php" method="POST" id="crearUsuarioForm">
               <p>
                   <label for="titulo">Título de la Novedad:</label><br>
             <input type="text" name="titulo" id="titulo" required><br>
@@ -199,7 +145,7 @@
                 logout(); // Llamar a la función logout al hacer clic en el botón de logout
             });
         });
-    </script></script>
+    </script>
 	
 </body>
 

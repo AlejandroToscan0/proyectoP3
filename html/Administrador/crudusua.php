@@ -92,7 +92,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="#" class="full-width">
+                        <a href="usuarios.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class='bx bx-user'></i>
                             </div>
@@ -110,7 +110,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="#" class="full-width">
+                        <a href="regis_docen.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class='bx bx-user'></i>
                             </div>
@@ -128,7 +128,7 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="#" class="full-width">
+                        <a href="regis_franhora.php" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class='bx bx-time-five'></i>
                             </div>
@@ -137,20 +137,11 @@
                     </li>
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
-                        <a href="#" class="full-width">
+                        <a href="resgi_labo.html" class="full-width">
                             <div class="navLateral-body-cl">
                                 <i class='bx bxl-flask'></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet">LABORATORIO</div>
-                        </a>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl">
-                                <i class='bx bx-news'></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet">NOVEDADES</div>
                         </a>
                     </li>
                     <li class="full-width divider-menu-h"></li>
