@@ -136,3 +136,34 @@
 #agregarMateriaForm input[type="submit"]:hover {
     background-color: #5E7E50; /* Cambia el color de fondo al pasar el ratón */
 }
+
+/* Estilos para la tabla de novedades */
+#novedades table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#novedades th, #novedades td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#novedades th {
+    background-color: #5E7E50;
+    color: white;
+}
+
+#novedades tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+#novedades tbody tr:hover {
+    background-color: #ddd;
+}
+
+#novedades .loading {
+    color: #999;
+    font-style: italic;
+}
