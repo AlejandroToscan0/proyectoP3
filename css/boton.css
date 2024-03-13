@@ -1,8 +1,8 @@
 .logout-button {
     position: static;
-    top: 20px;
+    top: 50px;
     right: 20px;
-    background-color: transparent;
+    background-color: aliceblue;
     border: none;
     cursor: pointer;
 }
