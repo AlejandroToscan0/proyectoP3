@@ -34,7 +34,7 @@ try {
     <script src="../../js/sweetalert2.min.js"></script>
     <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="../../js/main(1).js"></script>
-
+    <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
     <!-- Agregamos una fuente de iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
@@ -53,7 +53,7 @@ try {
                         <div class="mdl-tooltip" for="notifications">Notifications</div>
                     </li>
                     <li class="btn-exit" id="btn-exit">
-                        <a href="salida_sislog.php">
+                        <a href="../../index.html">
                             <i class='bx bx-log-out'></i>
                             <div class="mdl-tooltip" for="btn-exit">LogOut</div>
                         </a>
@@ -84,7 +84,7 @@ try {
                     <p>ADMINISTRADOR</p>
                 </figcaption>
             </figure>
-            <div class="full-width tittles navLateral-body-tittle-menu">
+            <div class="full-width tittles navLateral-body-tittle-menu" style="background-color: rgb(101, 133, 122)">
                 <i class='bx bx-desktop'></i><span class="hide-on-tablet">&nbsp; MENÚ</span>
             </div>
             <nav class="full-width">
