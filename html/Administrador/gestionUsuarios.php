@@ -11,12 +11,9 @@
     <link rel="stylesheet" href="css_form/normalize.css">
     <link rel="stylesheet" href="css_form/estilos.css">
     <link rel="stylesheet" href="css_form/material-design-iconic-font.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css_form/jquery.mCustomScrollbar.css">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../css/estilo_user.css">
-    <script src="../../js/js_user.js" defer></script>
     <script>
         window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
     </script>
@@ -25,8 +22,9 @@
     <script src="js_form/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js_form/Egreso.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css_form/estilo_form.css">
+    <link href="../css/css_crud.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -96,11 +94,11 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERIODO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="registro_periodo.html">Agregar Periodo</a></li>
-                            <li><a href="#">Ver Periodos</a></li>
+                            <li><a href="regis_periodo.html">Agregar Periodo</a></li>
+                            <li><a href="crud_periodo.html">Ver Periodos</a></li>
                         </ul>
                     </li>
-                    <li class="full-width divider-menu-h"></li>
+                    <!--  <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl ">
@@ -112,7 +110,7 @@
                             <li><a href="#">Agregar Departamento</a></li>
                             <li><a href="#">Ver Departamentos</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
@@ -123,7 +121,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_carrera.html">Agregar Carrera</a></li>
-                            <li><a href="#">Ver Carrera</a></li>
+                            <li><a href="crud_carrera.html">Ver Carrera</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -136,7 +134,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_materia.html">Agregar Usuario</a></li>
-                            <li><a href="materias.php">Ver Usuarios</a></li>
+                            <li><a href="crud_materia.html">Ver Usuarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -149,7 +147,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_docen.html">Agregar Docente</a></li>
-                            <li><a href="#">Ver Docentes</a></li>
+                            <li><a href="crud_docente.html">Ver Docentes</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -162,7 +160,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="resgi_labo.html">Agregar Laboratorio</a></li>
-                            <li><a href="#">Ver Laboratorios</a></li>
+                            <li><a href="crud_laboratorio.html">Ver Laboratorios</a></li>
                         </ul>
                     </li>
                     <li class=" full-width divider-menu-h"></li>
@@ -187,7 +185,7 @@
                             <div class="navLateral-body-cr hide-on-tablet ">HORARIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="horario.php">Agregar Horario</a></li>
+                            <li><a href="crear_horario.php">Agregar Horario</a></li>
                             <li><a href="#">Ver Horarios</a></li>
                         </ul>
                     </li>
@@ -199,7 +197,6 @@
     <!-- DIVS FIN -->
     <section class="full-width pageContent">
         <section class="full-width text-center" style="padding: 40px 0;">
-            <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
             <h1>LISTA DE USUARIOS</h1>
             <?php
             include('../../php/gestionUsuarioConn.php');

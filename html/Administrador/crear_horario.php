@@ -1,3 +1,68 @@
+<?php
+include('../../php/conexion.php');
+
+// Recuperar datos de la base de datos para llenar las opciones del formulario
+$query_carreras = "SELECT * FROM carrera";
+$stmt_carreras = $conn->query($query_carreras);
+$carreras = $stmt_carreras->fetchAll();
+
+$query_departamentos = "SELECT * FROM departamento";
+$stmt_departamentos = $conn->query($query_departamentos);
+$departamentos = $stmt_departamentos->fetchAll();
+
+$query_docentes = "SELECT * FROM docente";
+$stmt_docentes = $conn->query($query_docentes);
+$docentes = $stmt_docentes->fetchAll();
+
+$query_periodos = "SELECT * FROM periodo";
+$stmt_periodos = $conn->query($query_periodos);
+$periodos = $stmt_periodos->fetchAll();
+
+$query_materias = "SELECT * FROM materia";
+$stmt_materias = $conn->query($query_materias);
+$materias = $stmt_materias->fetchAll();
+
+$query_laboratorios = "SELECT * FROM laboratorio";
+$stmt_laboratorios = $conn->query($query_laboratorios);
+$laboratorios = $stmt_laboratorios->fetchAll();
+
+$query_franjas = "SELECT * FROM franja_horaria";
+$stmt_franjas = $conn->query($query_franjas);
+$franjas = $stmt_franjas->fetchAll();
+
+
+// Recupera más datos necesarios para llenar otras opciones del formulario...
+
+// Procesar el formulario cuando se envíe
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Recupera los datos del formulario
+    $carrera = $_POST['carrera'];
+    $departamento = $_POST['departamento'];
+    $docente = $_POST['docente'];
+    $periodo = $_POST['periodo'];
+    $materia = $_POST['materia'];
+    $laboratorio = $_POST['laboratorio'];
+    $franja_horaria = $_POST['franja_horaria'];
+
+    // Guarda los datos en la base de datos
+    // Aquí deberías escribir el código para insertar los datos en la tabla correspondiente
+    // Por ejemplo:
+    /*
+    $query_insertar = "INSERT INTO tabla (columna1, columna2, ...) VALUES (:valor1, :valor2, ...)";
+    $stmt_insertar = $conn->prepare($query_insertar);
+    $stmt_insertar->bindParam(':valor1', $valor1);
+    $stmt_insertar->bindParam(':valor2', $valor2);
+    ...
+    $stmt_insertar->execute();
+    */
+
+    // Redirige o muestra el horario después de guardar los datos
+    // Por ejemplo:
+    // header("Location: horario.php");
+    // exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -56,8 +121,7 @@
     <section class="full-width navLateral">
         <div class="full-width navLateral-bg btn-menu"></div>
         <div class="full-width navLateral-body">
-            <div class="full-width navLateral-body-logo text-center tittles"
-                style="background-color: rgb(101, 133, 122)">
+            <div class="full-width navLateral-body-logo text-center tittles" style="background-color: rgb(101, 133, 122)">
                 <i class='bx btn-menu '>ADMINISTRACION</i>
             </div>
             <figure class="full-width" style="height: 77px;">
@@ -199,47 +263,34 @@
     <!-- page content -->
     <section class="full-width pageContent">
         <section class="full-width text-center" style="padding: 40px 0;">
-            <div class="container">
-                <h2>INGRESO PERIODO</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="id_peri">Id Periodo:</label>
-                        <input type="number" id="id_peri" name="id_peri" required>
-                    </div>
+            <h1>Crear Horario</h1>
+            <form method="POST" action="<?php echo htmlspecialchars($_SERVER[" PHP_SELF"]); ?>">
+                <label for="carrera">Carrera:</label>
+                <select name="carrera" id="carrera">
+                    <?php foreach ($carreras as $carrera) : ?>
+                        <option value="<?php echo $carrera['ID_CARRERA']; ?>">
+                            <?php echo $carrera['NOMBRE_CARRERA']; ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+                <label for="departamento">Departamento:</label>
+                <select name="departamento" id="departamento">
+                    <?php foreach ($departamentos as $departamento) : ?>
+                        <option value="<?php echo $departamento['ID_DEP']; ?>"><?php echo $departamento['NOMBRE_DEP']; ?></option>
+                    <?php endforeach; ?>
+                </select>
 
-                    <div class="form-group">
-                        <label for="period">Nombre Periodo:</label>
-                        <input type="text" id="period" name="period" required pattern="[A-Za-z0-9\s]+"
-                            title="Ingrese solo letras, números y espacios, sin caracteres especiales ni números negativos">
-                    </div>
+                <label for="docente">Docente:</label>
+                <select name="docente" id="docente">
+                    <?php foreach ($docentes as $docente) : ?>
+                        <option value="<?php echo $docente['Id_docen']; ?>"><?php echo $docente['nombre_docen']; ?></option>
+                    <?php endforeach; ?>
+                </select>
 
-
-                    <button type="submit">Registrar Periodo</button>
-                </form>
-            </div>
-            <button class="logout-button" onclick="location.href='administrador.html'">
-                <i class="fas fa-backward fa-2x"></i></button>
+                <button type="submit">Guardar</button>
+            </form>
         </section>
     </section>
-    <script>
-        const form = document.getElementById('formulario');
-        const inputs = form.querySelectorAll('input');
-
-        form.addEventListener('submit', function (event) {
-            inputs.forEach(input => {
-                if (input.checkValidity()) {
-                    input.classList.remove('invalid');
-                } else {
-                    input.classList.add('invalid');
-                }
-            });
-
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                alert('Por favor, complete todos los campos requeridos correctamente.');
-            }
-        });
-    </script>
 </body>
 
 </html>

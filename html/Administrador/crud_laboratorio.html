@@ -196,50 +196,54 @@
         </div>
     </section>
     <!-- DIVS FIN -->
-    <!-- page content -->
+    <!-- Contenido principal -->
     <section class="full-width pageContent">
-        <section class="full-width text-center" style="padding: 40px 0;">
-            <div class="container">
-                <h2>INGRESO PERIODO</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="id_peri">Id Periodo:</label>
-                        <input type="number" id="id_peri" name="id_peri" required>
+        <div class="container-xl">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="h3"><b>LISTA LABORATORIO</b></h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <!-- Cambiar la URL del formulario de usuarios en el atributo href -->
+                                <a href="../docente" class="btn btn-success" data-toggle="modal">
+                                    <i class="fas fa-plus"></i> <!-- Agregar el icono de Font Awesome -->
+                                    <span>Nuevo Laboratorio</span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="period">Nombre Periodo:</label>
-                        <input type="text" id="period" name="period" required pattern="[A-Za-z0-9\s]+"
-                            title="Ingrese solo letras, números y espacios, sin caracteres especiales ni números negativos">
-                    </div>
-
-
-                    <button type="submit">Registrar Periodo</button>
-                </form>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre Laboratorio</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="proyecto14768_data">
+                            <!-- Aquí se cargarán los datos de los usuarios -->
+                        </tbody>
+                    </table>
+                    <p class="loading">Cargando datos</p>
+                </div>
             </div>
-            <button class="logout-button" onclick="location.href='administrador.html'">
-                <i class="fas fa-backward fa-2x"></i></button>
-        </section>
+        </div>
     </section>
+
+
     <script>
-        const form = document.getElementById('formulario');
-        const inputs = form.querySelectorAll('input');
 
-        form.addEventListener('submit', function (event) {
-            inputs.forEach(input => {
-                if (input.checkValidity()) {
-                    input.classList.remove('invalid');
-                } else {
-                    input.classList.add('invalid');
-                }
-            });
 
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                alert('Por favor, complete todos los campos requeridos correctamente.');
-            }
-        });
+
+
+
+
     </script>
+
 </body>
 
 </html>

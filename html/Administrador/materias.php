@@ -1,31 +1,3 @@
-<?php
-include('../../php/conexion.php');
-
-// Consulta SQL para obtener los valores de las tablas relevantes
-$query_carreras = "SELECT ID_CARRERA FROM carrera";
-$query_franjas = "SELECT ID_FRANJA FROM franja_horaria";
-$query_labs = "SELECT ID_LAB FROM laboratorio";
-
-try {
-    // Preparar y ejecutar la consulta para carreras
-    $statement_carreras = $conn->prepare($query_carreras);
-    $statement_carreras->execute();
-    $carreras = $statement_carreras->fetchAll(PDO::FETCH_ASSOC);
-
-    // Preparar y ejecutar la consulta para franjas horarias
-    $statement_franjas = $conn->prepare($query_franjas);
-    $statement_franjas->execute();
-    $franjas = $statement_franjas->fetchAll(PDO::FETCH_ASSOC);
-
-    // Preparar y ejecutar la consulta para laboratorios
-    $statement_labs = $conn->prepare($query_labs);
-    $statement_labs->execute();
-    $labs = $statement_labs->fetchAll(PDO::FETCH_ASSOC);
-} catch (PDOException $e) {
-    // Manejar errores de consulta
-    echo "Error al consultar la base de datos: " . $e->getMessage();
-}
-?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -51,6 +23,8 @@ try {
     <script src="js_form/Egreso.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
     <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css_form/estilo_form.css">
+    <link href="../css/css_crud.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -120,11 +94,11 @@ try {
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERIODO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="registro_periodo.html">Agregar Periodo</a></li>
-                            <li><a href="#">Ver Periodos</a></li>
+                            <li><a href="regis_periodo.html">Agregar Periodo</a></li>
+                            <li><a href="crud_periodo.html">Ver Periodos</a></li>
                         </ul>
                     </li>
-                    <li class="full-width divider-menu-h"></li>
+                    <!--  <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl ">
@@ -136,7 +110,7 @@ try {
                             <li><a href="#">Agregar Departamento</a></li>
                             <li><a href="#">Ver Departamentos</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
@@ -147,7 +121,7 @@ try {
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_carrera.html">Agregar Carrera</a></li>
-                            <li><a href="#">Ver Carrera</a></li>
+                            <li><a href="crud_carrera.html">Ver Carrera</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -160,7 +134,7 @@ try {
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_materia.html">Agregar Usuario</a></li>
-                            <li><a href="materias.php">Ver Usuarios</a></li>
+                            <li><a href="crud_materia.html">Ver Usuarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -173,7 +147,7 @@ try {
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_docen.html">Agregar Docente</a></li>
-                            <li><a href="#">Ver Docentes</a></li>
+                            <li><a href="crud_docente.html">Ver Docentes</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -186,7 +160,7 @@ try {
                         </a>
                         <ul class="submenu activado">
                             <li><a href="resgi_labo.html">Agregar Laboratorio</a></li>
-                            <li><a href="#">Ver Laboratorios</a></li>
+                            <li><a href="crud_laboratorio.html">Ver Laboratorios</a></li>
                         </ul>
                     </li>
                     <li class=" full-width divider-menu-h"></li>
@@ -211,7 +185,7 @@ try {
                             <div class="navLateral-body-cr hide-on-tablet ">HORARIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="horario.php">Agregar Horario</a></li>
+                            <li><a href="crear_horario.php">Agregar Horario</a></li>
                             <li><a href="#">Ver Horarios</a></li>
                         </ul>
                     </li>

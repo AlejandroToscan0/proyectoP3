@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Novedades</title>
+    
+    <link href="../../form_proye/css/estilo_form.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <h2>INGRESO NOVEDADES</h2>
+        <form action="../php/guar_nov.php" method="POST" id="novedadForm">
+            <div class="form-group">
+                <label for="lab1">Laboratorio:</label>
+                <input type="text" id="lab1" name="lab1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tinov"> Título Novedad:</label>
+                <input type="text" id="tinov" name="tinov" required>
+            </div>
+			
+			<div class="form-group">
+                <label for="estnov1"> Estado I - Novedad</label>
+                <input type="text" id="estnov1" name="estnov1" required>
+            </div>
+			
+            
+            <div class="form-group">
+                <label for="fecha1">Seleccione la fecha y hora de la novedad</label>
+                <input class="mdl-textfield_input" type="datetime-local" id="fecha1" name="fecha1">
+                <span class="mdl-textfield__error">Fecha y hora inválidas</span>
+            </div>
+			
+			<div class="form-group">
+                <label for="estnov2"> Estado II - Novedad</label>
+                <input type="text" id="estnov2" name="estnov2" required>
+            </div>
+                
+			
+            <div class="form-group">
+                <label for="fecha2">Seleccione la segunda fecha y hora de la novedad</label>
+                <input class="mdl-textfield_input" type="datetime-local" id="fecha2" name="fecha2">
+                <span class="mdl-textfield__error">Fecha y hora inválidas</span>
+            </div>
+            
+            <div class="form-group">
+               <label for="docente">Docente:</label>
+               <input type="text" id="docente" name="docente" pattern="[A-Za-záéíóúÁÉÍÓÚ\s]+" title="Ingrese solo letras y espacios" required>
+            </div>
+                                    
+            <button type="submit">Registrar Novedad</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('novedadForm').addEventListener('submit', function(event) {
+            var formIsValid = true;
+            var inputs = this.querySelectorAll('input, select, textarea');
+            
+            inputs.forEach(function(input) {
+                if (!input.checkValidity()) {
+                    input.classList.add('error');
+                    formIsValid = false;
+                } else {
+                    input.classList.remove('error');
+                }
+            });
+            
+            if (!formIsValid) {
+                event.preventDefault(); // Evita que el formulario se envíe
+            }
+        });
+        
+        // Define la función validateDate() si es necesario
+        function validateDate() {
+            // Lógica de validación de fecha y hora
+        }
+    </script>
+</body>
+</html>
+

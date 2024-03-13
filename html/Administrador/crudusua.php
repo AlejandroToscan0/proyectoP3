@@ -4,64 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>crud usuario</title>
-
-    <!-- Agregar enlaces a tus archivos CSS -->
-    <link rel="stylesheet" href="../../css_2/estilos.css">
-    <link rel="stylesheet" href="../../css_2/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="../../css_2/main.css">
-    <link rel="stylesheet" href="../../css_2/material.min.css">
-    <link rel="stylesheet" href="../../css_2/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="../../css_2/normalize.css">
-    <link rel="stylesheet" href="../../css_2/sweetalert2.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <title>FORMS</title>
     <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
-
-    <script src="../../js/material.min.js"></script>
-    <script src="../../js/sweetalert2.min.js"></script>
-    <script src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="../../js/main(1).js"></script>
-
-    <!-- Agregamos una fuente de iconos -->
+    <link rel="stylesheet" href="../../css/boton.css">
+    <link href="../../css_2/estipru.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css_form/normalize.css">
+    <link rel="stylesheet" href="css_form/estilos.css">
+    <link rel="stylesheet" href="css_form/material-design-iconic-font.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css_form/jquery.mCustomScrollbar.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+    </script>
+    <script src="js_form/material.min.js"></script>
+    <script src="js_form/sweetalert2.min.js"></script>
+    <script src="js_form/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js_form/Egreso.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
-    <link href="../../css_2/css_crud.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css_form/estilo_form.css">
+    <link href="../css/css_crud.css" rel="stylesheet" type="text/css">
 </head>
 
-<body onload="cargarApp()">
-    <!-- Navbar -->
+<body>
+    <!-- DIV ARRIBA -->
     <div class="full-width navBar">
-        <!-- Contenido de la barra de navegación -->
-        <div class="full-width navBar">
-            <div class="full-width navBar-options">
-                <i class='bx bx-menu btn-menu' id="btn-menu"></i>
-                <div class="mdl-tooltip" for="btn-menu">Menu</div>
-                <nav class="navBar-options-list">
-                    <ul class="list-unstyle">
-                        <li class="btn-Notification" id="notifications">
-                            <i class='bx bx-bell'></i>
-                            <!-- <i class="zmdi zmdi-notifications-active btn-Notification" id="notifications"></i> -->
-                            <div class="mdl-tooltip" for="notifications">Notifications</div>
-                        </li>
-                        <li class="btn-exit" id="btn-exit">
-                            <a href="salida_sislog.php">
-                                <i class='bx bx-log-out'></i>
-                                <div class="mdl-tooltip" for="btn-exit">LogOut</div>
-                            </a>
-                        </li>
-                        </li>
-                        <li class="text-condensedLight noLink"><small>Usuario</small></li>
-                        <li class="noLink">
-                            <figure>
-                                <img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
-                            </figure>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+        <div class="full-width navBar-options" style="background-color: rgb(101, 133, 122)">
+            <i class='bx bx-menu btn-menu' id="btn-menu" style="padding-left: 10px;"></i>
+            <div class="mdl-tooltip" for="btn-menu">Menu</div>
+            <nav class="navBar-options-list">
+                <ul class="list-unstyle">
+
+                    <li class="btn-exit" id="btn-exit">
+                        <a href="../../index.html">
+                            <i class='bx bx-log-out'></i>
+                            <div class="mdl-tooltip" for="btn-exit">LogOut</div>
+                        </a>
+                    </li>
+                    <li class="text-condensedLight noLink"><small>Usuario</small></li>
+                    <li class="noLink">
+                        <figure>
+                            <img src="../../img/avatar-male2.png" alt="Avatar" class="img-responsive">
+                        </figure>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
-
-    <!-- NavLateral -->
+    <!-- DIV INICIO -->
     <section class="full-width navLateral">
         <div class="full-width navLateral-bg btn-menu"></div>
         <div class="full-width navLateral-body">
@@ -103,11 +94,11 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERIODO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="registro_periodo.html">Agregar Periodo</a></li>
-                            <li><a href="#">Ver Periodos</a></li>
+                            <li><a href="regis_periodo.html">Agregar Periodo</a></li>
+                            <li><a href="crud_periodo.html">Ver Periodos</a></li>
                         </ul>
                     </li>
-                    <li class="full-width divider-menu-h"></li>
+                    <!--  <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl ">
@@ -119,7 +110,7 @@
                             <li><a href="#">Agregar Departamento</a></li>
                             <li><a href="#">Ver Departamentos</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li class="full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
@@ -130,7 +121,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_carrera.html">Agregar Carrera</a></li>
-                            <li><a href="#">Ver Carrera</a></li>
+                            <li><a href="crud_carrera.html">Ver Carrera</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -143,7 +134,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_materia.html">Agregar Usuario</a></li>
-                            <li><a href="materias.php">Ver Usuarios</a></li>
+                            <li><a href="crud_materia.html">Ver Usuarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -156,7 +147,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="regis_docen.html">Agregar Docente</a></li>
-                            <li><a href="#">Ver Docentes</a></li>
+                            <li><a href="crud_docente.html">Ver Docentes</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -169,7 +160,7 @@
                         </a>
                         <ul class="submenu activado">
                             <li><a href="resgi_labo.html">Agregar Laboratorio</a></li>
-                            <li><a href="#">Ver Laboratorios</a></li>
+                            <li><a href="crud_laboratorio.html">Ver Laboratorios</a></li>
                         </ul>
                     </li>
                     <li class=" full-width divider-menu-h"></li>
@@ -194,7 +185,7 @@
                             <div class="navLateral-body-cr hide-on-tablet ">HORARIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="horario.php">Agregar Horario</a></li>
+                            <li><a href="crear_horario.php">Agregar Horario</a></li>
                             <li><a href="#">Ver Horarios</a></li>
                         </ul>
                     </li>
@@ -203,6 +194,7 @@
             </nav>
         </div>
     </section>
+    <!-- DIVS FIN -->
     <!-- Contenido principal -->
     <section class="full-width pageContent">
         <div class="container-xl">

@@ -56,8 +56,7 @@
     <section class="full-width navLateral">
         <div class="full-width navLateral-bg btn-menu"></div>
         <div class="full-width navLateral-body">
-            <div class="full-width navLateral-body-logo text-center tittles"
-                style="background-color: rgb(101, 133, 122)">
+            <div class="full-width navLateral-body-logo text-center tittles" style="background-color: rgb(101, 133, 122)">
                 <i class='bx btn-menu '>ADMINISTRACION</i>
             </div>
             <figure class="full-width" style="height: 77px;">
@@ -196,50 +195,60 @@
         </div>
     </section>
     <!-- DIVS FIN -->
-    <!-- page content -->
+    <!-- Contenido principal -->
     <section class="full-width pageContent">
         <section class="full-width text-center" style="padding: 40px 0;">
-            <div class="container">
-                <h2>INGRESO PERIODO</h2>
-                <form action="#" method="POST">
-                    <div class="form-group">
-                        <label for="id_peri">Id Periodo:</label>
-                        <input type="number" id="id_peri" name="id_peri" required>
-                    </div>
+            <h1>LISTA DE CARRERAS</h1>
+            <?php
+            include('../../php/gestionCarreraConn.php');
+            echo "<table border='1'>";
+            echo "<tr>
+            <th>ID CARRERA</th>
+            <th>ID DEPARTAMENTO</th>
+            <th>NOMBRE CARRERA</th>
+            <th>ESTADO</th>
+            <th>Acciones</th>
+        </tr>";
 
-                    <div class="form-group">
-                        <label for="period">Nombre Periodo:</label>
-                        <input type="text" id="period" name="period" required pattern="[A-Za-z0-9\s]+"
-                            title="Ingrese solo letras, números y espacios, sin caracteres especiales ni números negativos">
-                    </div>
+            foreach ($carrera as $carrera) {
+                echo "<tr>";
+                echo "<td>" . $carrera['id_carrera'] . "</td>";
+                echo "<td>" . $carrera['id_dep'] . "</td>";
+                echo "<td>" . $carrera['nombre_carrera'] . "</td>";
+                echo "<td>" . $carrera['estado'] . "</td>";
+                echo "<td>
+                <a href='?eliminar_id=" . $carrera['id'] . "'>Eliminar</a>
+                <a href='?editar_id=" . $carrera['id'] . "'>Editar</a>
+              </td>";
+                echo "</tr>";
+            }
 
+            echo "</table>";
 
-                    <button type="submit">Registrar Periodo</button>
-                </form>
-            </div>
-            <button class="logout-button" onclick="location.href='administrador.html'">
-                <i class="fas fa-backward fa-2x"></i></button>
+            if ($carrear_a_editar) {
+                // Mostrar formulario de edición con los datos del perfil
+                echo "<section class='full-width pageContent'>
+                <section class='full-width text-center' style='padding: 40px 0;'>
+                <h1 class='text-center tittles2' style='color: #31470b;'>Editar USUARIO</h1>";
+                echo "<form action='' method='POST'>";
+                echo "<label for='id_carrera'>ID CARRERA:</label>";
+                echo "<input type='text' name='id' value='" . $carrera_a_editar['id_carrera'] . "' readonly><br>";
+
+                echo "<label for='id_dep'>ID DEPARTAMENTO:</label>";
+                echo "<input type='text' name='cedula' value='" . $carrera_a_editar['id_dep'] . "' readonly><br>";
+
+                echo "<label for='nombre_carrera'>Nombre Carrera:</label>";
+                echo "<input type='text' name='nombre' required value='" . $carrera_a_editar['nombre_carrera'] . "'><br>";
+
+                echo " <input type='submit' value='Registrar Usuario'>";
+                echo "</form>";
+                echo "</section>
+        </section>";
+            }
+            ?>
         </section>
     </section>
-    <script>
-        const form = document.getElementById('formulario');
-        const inputs = form.querySelectorAll('input');
 
-        form.addEventListener('submit', function (event) {
-            inputs.forEach(input => {
-                if (input.checkValidity()) {
-                    input.classList.remove('invalid');
-                } else {
-                    input.classList.add('invalid');
-                }
-            });
-
-            if (!form.checkValidity()) {
-                event.preventDefault();
-                alert('Por favor, complete todos los campos requeridos correctamente.');
-            }
-        });
-    </script>
 </body>
 
 </html>
