@@ -187,12 +187,12 @@ try {
                     <input type="time" name="time1" id="time1" required><br>
                     <label for="time2">Hora Final:</label><br>
                     <input type="time" name="time2" id="time2" required><br>
-                    <label for="textfield">Dias:</label><br>
-                    <input type="text" name="dias" id="dias" required>
+                    <label for="dias">Días:</label><br>
+                    <input type="text" name="dias" id="dias" required pattern="[a-zA-Z]+" title="Ingrese los días de la semana">
                     <br>
                     <br>
 
-                    <input type="submit" value="Agregar Franja Horaria">
+                    <input type="submit" value="Agregar Franja Horaria" onclick="validateForm()">
                 </p>
             </form>
             <button class="logout-button" onclick="location.href='administrador.html'">
@@ -200,30 +200,18 @@ try {
         </section>
     </section>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función para cerrar sesión y redirigir al index
-            function logout() {
-                // Realizar aquí las acciones de cierre de sesión (limpiar cookies, eliminar tokens, etc.)
-                // Por ejemplo, podrías hacer una solicitud AJAX al servidor para cerrar la sesión
+        function validateForm() {
+            var form = document.getElementById('agregarFranjaHorForm');
+            var inputs = form.querySelectorAll('input, select');
 
-                // Redirigir al index después de cerrar sesión
-                window.location.href = ""; // Cambia "index.html" por la ruta de tu página de inicio
-            }
-
-            var btnMenu = document.getElementById('btn-menu');
-            var navLateral = document.querySelector('.navLateral');
-            var btnLogout = document.getElementById('btn-exit');
-
-            btnMenu.addEventListener('click', function() {
-                navLateral.classList.toggle('closed');
+            inputs.forEach(function(input) {
+                if (!input.checkValidity()) {
+                    input.classList.add('invalid');
+                } else {
+                    input.classList.remove('invalid');
+                }
             });
-
-            // Agregar evento de clic al botón de logout
-            btnLogout.addEventListener('click', function(event) {
-                event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-                logout(); // Llamar a la función logout al hacer clic en el botón de logout
-            });
-        });
+        }
     </script>
 </body>
 

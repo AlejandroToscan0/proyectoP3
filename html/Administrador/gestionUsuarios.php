@@ -169,19 +169,6 @@
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl ">
-                                <i class="fa-solid fa-landmark"></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet ">GESTION AULA</div>
-                        </a>
-                        <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Aula</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Aulas</a></li>
-                        </ul>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl ">
                                 <i class="fa-solid fa-calendar-check"></i>
                             </div>
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION FRANJA HORARIA</div>

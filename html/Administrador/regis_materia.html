@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
     <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css_form/estilo_form.css">
-    <link href="../css/css_crud.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -95,8 +94,8 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERIODO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="resgi_perio.php">Agregar Periodo</a></li>
-                            <li><a href="#">Ver Periodos</a></li>
+                            <li><a href="usuarios.html">Agregar Periodo</a></li>
+                            <li><a href="gestionUsuarios.php">Ver Periodos</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -108,8 +107,8 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION DEPARTAMENTO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="#">Agregar Departamento</a></li>
-                            <li><a href="#">Ver Departamentos</a></li>
+                            <li><a href="usuarios.html">Agregar Departamento</a></li>
+                            <li><a href="gestionUsuarios.php">Ver Departamentos</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -118,7 +117,7 @@
                             <div class="navLateral-body-cl ">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
-                            <div class="navLateral-body-cr hide-on-tablet">GESTION CARRERA</div>
+                            <div class="navLateral-body-cr hide-on-tablet ">GESTION CARRERA</div>
                         </a>
                         <ul class="submenu activado">
                             <li><a href="usuarios.html">Agregar Carrera</a></li>
@@ -212,32 +211,62 @@
     <!-- page content -->
     <section class="full-width pageContent">
         <section class="full-width text-center" style="padding: 40px 0;">
-            <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
-            <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
-            <form action="../../php/user_conn.php" method="POST" id="crearUsuarioForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br>
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required><br>
-                <label for="clave">Clave:</label>
-                <input type="password" id="clave" name="clave" required><br>
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required><br>
-                <label for="cedula">Cedula:</label>
-                <input type="number" id="cedula" name="cedula" required><br>
-                <label for="rol">Rol:</label><br>
-                <select id="rol" name="rol">
-                    <option value="administrador">Administrador <i class='bx bx-user'></i></option>
-                    <option value="docente">Docente <i class='bx bx-book-reader'></i></option>
-                    <option value="laboratorista">Laboratorista <i class='bx bx-flask'></i></option>
-                </select><br><br>
-                <input type="submit" value="Registrar Usuario">
-            </form>
+            <div class="container">
+                <h2>INGRESO MATERIA</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="id_dep">Id Departamento:</label>
+                        <input type="number" id="id_dep" name="id_dep" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="id_mat">Id Materia:</label>
+                        <input type="number" id="id_mat" name="id_mat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="materia">Nombre Materia:</label>
+                        <input type="text" id="mate" name="mate" required pattern="[A-Za-z\s]+" maxlength="80"
+                            title="Ingrese solo letras">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cred">Créditos:</label>
+                        <input type="text" id="cred" name="cred" required pattern="[0-9]+"
+                            title="Ingrese solo números, sin caracteres especiales ni números negativos">
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Horas:</label>
+                        <input type="number" id="hora" name="hora" required pattern="[0-9]+"
+                            title="Ingrese solo números, sin caracteres especiales ni números negativos">
+                    </div>
+
+                    <button type="submit">Registrar Materia</button>
+                </form>
+            </div>
             <button class="logout-button" onclick="location.href='administrador.html'">
                 <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
+    <script>
+        const form = document.getElementById('formulario');
+        const inputs = form.querySelectorAll('input');
 
+        form.addEventListener('submit', function (event) {
+            inputs.forEach(input => {
+                if (input.checkValidity()) {
+                    input.classList.remove('invalid');
+                } else {
+                    input.classList.add('invalid');
+                }
+            });
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert('Por favor, complete todos los campos requeridos correctamente.');
+            }
+        });
+    </script>
 </body>
 
 </html>

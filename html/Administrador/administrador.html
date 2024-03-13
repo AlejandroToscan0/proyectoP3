@@ -12,7 +12,7 @@
         crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
 
 </head>
 
@@ -35,9 +35,9 @@
                             <div class="grid">
                                 <div class="grid__item" id="home-link">
                                     <div class="product">
-                                        <a href="./usuarios.html" class="tm-nav-link">
+                                        <a href="./crud_usuarios.html" class="tm-nav-link">
                                             <i class="fas fa-home fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">AGREGAR USUARIO</span>
+                                            <span class="tm-nav-text">GESTION USUARIOS</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
@@ -45,9 +45,9 @@
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
-                                        <a href="./gestionUsuarios.php" class="tm-nav-link">
-                                            <i class="fas fa-user-secret fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">VER USUARIOS</span>
+                                        <a href="./regis_periodo.html" class="tm-nav-link">
+                                            <i class='fas fa-regular fa-calendar fa-3x tm-nav-icon'></i>
+                                            <span class="tm-nav-text">GESTION PERIODO</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
@@ -55,9 +55,9 @@
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
-                                        <a href="../Administrador/regis_docen.html" class="tm-nav-link">
-                                            <i class="fas fa-chalkboard-user fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">AGREGAR DOCENTE</span>
+                                        <a href="#" class="tm-nav-link">
+                                            <i class="fas fa-solid fa-business-time fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">GESTION DEPARTAMENTO</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
@@ -65,9 +65,9 @@
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
-                                        <a href="../Administrador/resgi_perio.php" class="tm-nav-link">
-                                            <i class="fas fa-user-secret fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">PERIODO</span>
+                                        <a href="./regis_carrera.html" class="tm-nav-link">
+                                            <i class="fas fa-solid fa-graduation-cap fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">GESTION CARRERA</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
@@ -76,9 +76,9 @@
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
-                                        <a href="../Administrador/resgi_labo.html" class="tm-nav-link">
-                                            <i class="fas fa-user-secret fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">LABORATORIO</span>
+                                        <a href="./materias.php" class="tm-nav-link">
+                                            <i class="fas fa-solid fa-book-open fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">GESTION MATERIA</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
@@ -86,34 +86,44 @@
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
-                                        <a href="../Administrador/regis_franhora.php" class="tm-nav-link">
-                                            <i class="fas fa-user-secret fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">FRANJA HORARIA</span>
+                                        <a href="./regis_docen.html" class="tm-nav-link">
+                                            <i class="fas fa-solid fa-chalkboard-user fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">GESTION DOCENTE</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
                                 </div>
 
+                                <div class="grid__item" id="team-link">
+                                    <div class="product">
+                                        <a href="./resgi_labo.html" class="tm-nav-link">
+                                            <i class="fas fa-solid fa-flask-vial fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">GESTION LABORATORIO</span>
+                                            <div class="product__bg"></div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="grid__item" id="team-link">
+                                    <div class="product">
+                                        <a href="./regis_franhora.html" class="tm-nav-link">
+                                            <i class="fas fa-solid fa-calendar-check fa-3x tm-nav-icon"></i>
+                                            <span class="tm-nav-text">GESTIÓN FRANJA HORARIA</span>
+                                            <div class="product__bg"></div>
+                                        </a>
+                                    </div>
+                                </div>
 
                                 <div class="grid__item" id="team-link">
                                     <div class="product">
                                         <a href="./horario.php" class="tm-nav-link">
-                                            <i class="fas fa-users fa-3x tm-nav-icon"></i>
+                                            <i class="fas fa-solid fa-calendar-days fa-3x tm-nav-icon"></i>
                                             <span class="tm-nav-text">GESTION HORARIO</span>
                                             <div class="product__bg"></div>
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="grid__item" id="team-link">
-                                    <div class="product">
-                                        <a href="./materias.php" class="tm-nav-link">
-                                            <i class="fas fa-book fa-3x tm-nav-icon"></i>
-                                            <span class="tm-nav-text">GESTIÓN MATERIAS</span>
-                                            <div class="product__bg"></div>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>

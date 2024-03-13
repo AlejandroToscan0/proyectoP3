@@ -23,6 +23,7 @@
     <script src="js_form/Egreso.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
     <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css_form/estilo_form.css">
 </head>
 
 <body>
@@ -210,32 +211,45 @@
     <!-- page content -->
     <section class="full-width pageContent">
         <section class="full-width text-center" style="padding: 40px 0;">
-            <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
-            <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
-            <form action="../../php/user_conn.php" method="POST" id="crearUsuarioForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br>
-                <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required><br>
-                <label for="clave">Clave:</label>
-                <input type="password" id="clave" name="clave" required><br>
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required><br>
-                <label for="cedula">Cedula:</label>
-                <input type="number" id="cedula" name="cedula" required><br>
-                <label for="rol">Rol:</label><br>
-                <select id="rol" name="rol">
-                    <option value="administrador">Administrador <i class='bx bx-user'></i></option>
-                    <option value="docente">Docente <i class='bx bx-book-reader'></i></option>
-                    <option value="laboratorista">Laboratorista <i class='bx bx-flask'></i></option>
-                </select><br><br>
-                <input type="submit" value="Registrar Usuario">
-            </form>
+            <div class="container">
+                <h2>INGRESO LABORATORIO</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="id_lab">Id Laboratorio:</label>
+                        <input type="number" id="id_lab" name="id_lab" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="labo">Nombre Laboratorio:</label>
+                        <input type="text" id="labo" name="labo" required>
+                    </div>
+
+                    <button type="submit">Registrar Laboratorio</button>
+                </form>
+            </div>
             <button class="logout-button" onclick="location.href='administrador.html'">
                 <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
+    <script>
+        const form = document.getElementById('formulario');
+        const inputs = form.querySelectorAll('input');
 
+        form.addEventListener('submit', function (event) {
+            inputs.forEach(input => {
+                if (input.checkValidity()) {
+                    input.classList.remove('invalid');
+                } else {
+                    input.classList.add('invalid');
+                }
+            });
+
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                alert('Por favor, complete todos los campos requeridos correctamente.');
+            }
+        });
+    </script>
 </body>
 
 </html>

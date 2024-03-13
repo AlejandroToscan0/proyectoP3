@@ -23,6 +23,7 @@
     <script src="js_form/Egreso.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
     <link rel="icon" href="https://srvcas.espe.edu.ec/authenticationendpoint/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css_form/estilo_form.css">
 </head>
 
 <body>
