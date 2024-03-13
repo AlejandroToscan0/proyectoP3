@@ -96,8 +96,8 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERIODO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Periodo</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Periodos</a></li>
+                            <li><a href="registro_periodo.html">Agregar Periodo</a></li>
+                            <li><a href="#">Ver Periodos</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -109,8 +109,8 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION DEPARTAMENTO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Departamento</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Departamentos</a></li>
+                            <li><a href="#">Agregar Departamento</a></li>
+                            <li><a href="#">Ver Departamentos</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -122,8 +122,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION CARRERA</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Carrera</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Carrera</a></li>
+                            <li><a href="regis_carrera.html">Agregar Carrera</a></li>
+                            <li><a href="#">Ver Carrera</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -135,8 +135,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION MATERIA</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Usuario</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Usuarios</a></li>
+                            <li><a href="regis_materia.html">Agregar Usuario</a></li>
+                            <li><a href="materias.php">Ver Usuarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -148,8 +148,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION DOCENTES</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Docente</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Docentes</a></li>
+                            <li><a href="regis_docen.html">Agregar Docente</a></li>
+                            <li><a href="#">Ver Docentes</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -161,11 +161,11 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION LABORATORIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Laboratorio</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Laboratorios</a></li>
+                            <li><a href="resgi_labo.html">Agregar Laboratorio</a></li>
+                            <li><a href="#">Ver Laboratorios</a></li>
                         </ul>
                     </li>
-                    <li class="full-width divider-menu-h"></li>
+                    <li class=" full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl ">
@@ -174,8 +174,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION FRANJA HORARIA</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Franja Horaria</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Franja Horaria</a></li>
+                            <li><a href="regis_franhora.html">Agregar Franja Horaria</a></li>
+                            <li><a href="#">Ver Franja Horaria</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -187,8 +187,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">HORARIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Horario</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Horarios</a></li>
+                            <li><a href="horario.php">Agregar Horario</a></li>
+                            <li><a href="#">Ver Horarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>

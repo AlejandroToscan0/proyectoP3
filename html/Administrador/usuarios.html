@@ -95,7 +95,7 @@
                             <div class="navLateral-body-cr hide-on-tablet">GESTION PERIODO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="resgi_perio.php">Agregar Periodo</a></li>
+                            <li><a href="regis_periodo.html">Agregar Periodo</a></li>
                             <li><a href="#">Ver Periodos</a></li>
                         </ul>
                     </li>
@@ -118,11 +118,11 @@
                             <div class="navLateral-body-cl ">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
-                            <div class="navLateral-body-cr hide-on-tablet">GESTION CARRERA</div>
+                            <div class="navLateral-body-cr hide-on-tablet ">GESTION CARRERA</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Carrera</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Carrera</a></li>
+                            <li><a href="regis_carrera.html">Agregar Carrera</a></li>
+                            <li><a href="#">Ver Carrera</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -134,8 +134,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION MATERIA</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Usuario</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Usuarios</a></li>
+                            <li><a href="regis_materia.html">Agregar Usuario</a></li>
+                            <li><a href="materias.php">Ver Usuarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -147,8 +147,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION DOCENTES</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Docente</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Docentes</a></li>
+                            <li><a href="regis_docen.html">Agregar Docente</a></li>
+                            <li><a href="#">Ver Docentes</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -160,24 +160,11 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION LABORATORIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Laboratorio</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Laboratorios</a></li>
+                            <li><a href="resgi_labo.html">Agregar Laboratorio</a></li>
+                            <li><a href="#">Ver Laboratorios</a></li>
                         </ul>
                     </li>
-                    <li class="full-width divider-menu-h"></li>
-                    <li class="full-width">
-                        <a href="#" class="full-width">
-                            <div class="navLateral-body-cl ">
-                                <i class="fa-solid fa-landmark"></i>
-                            </div>
-                            <div class="navLateral-body-cr hide-on-tablet ">GESTION AULA</div>
-                        </a>
-                        <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Aula</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Aulas</a></li>
-                        </ul>
-                    </li>
-                    <li class="full-width divider-menu-h"></li>
+                    <li class=" full-width divider-menu-h"></li>
                     <li class="full-width">
                         <a href="#" class="full-width">
                             <div class="navLateral-body-cl ">
@@ -186,8 +173,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">GESTION FRANJA HORARIA</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Franja Horaria</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Franja Horaria</a></li>
+                            <li><a href="regis_franhora.html">Agregar Franja Horaria</a></li>
+                            <li><a href="#">Ver Franja Horaria</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -199,8 +186,8 @@
                             <div class="navLateral-body-cr hide-on-tablet ">HORARIO</div>
                         </a>
                         <ul class="submenu activado">
-                            <li><a href="usuarios.html">Agregar Horario</a></li>
-                            <li><a href="gestionUsuarios.php">Ver Horarios</a></li>
+                            <li><a href="horario.php">Agregar Horario</a></li>
+                            <li><a href="#">Ver Horarios</a></li>
                         </ul>
                     </li>
                     <li class="full-width divider-menu-h"></li>
@@ -214,17 +201,26 @@
         <section class="full-width text-center" style="padding: 40px 0;">
             <h1 class="text-center tittles2" style="color: #31470b;">REGISTRAR NUEVO USUARIO</h1>
             <!-- Aquí se mostrará el formulario cuando se seleccione "Gestor Perfiles" -->
-            <form action="../../php/user_conn.php" method="POST" id="crearUsuarioForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required><br>
+            <form action="../php/user_conn.php" method="POST" id="crearUsuarioForm"
+                onsubmit="return validarFormulario()">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-záéíóúÁÉÍÓÚ\s]+"
+                    title="Ingrese solo letras">
                 <label for="usuario">Usuario:</label>
-                <input type="text" id="usuario" name="usuario" required><br>
+                <input type="text" id="usuario" name="usuario" required pattern="[A-Za-z0-9]+" maxlength="10"
+                    title="Ingrese solo letras y números, máximo 10 caracteres">
                 <label for="clave">Clave:</label>
                 <input type="password" id="clave" name="clave" required><br>
                 <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required><br>
+                <input type="email" id="correo" name="correo" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                    title="Ingrese un correo electrónico válido"><br>
                 <label for="cedula">Cedula:</label>
-                <input type="number" id="cedula" name="cedula" required><br>
+                <input type="number" id="cedula" name="cedula" required pattern="[0-9]{1,10}" maxlength="10"
+                    title="Ingrese solo números positivos y como máximo 10 dígitos"><br>
+                <label for="tel">Teléfono:</label>
+                <input type="text" id="tele" name="tele" required pattern="[0-9]{1,10}"
+                    title="Ingrese solo números, máximo 10 dígitos">
                 <label for="rol">Rol:</label><br>
                 <select id="rol" name="rol">
                     <option value="administrador">Administrador <i class='bx bx-user'></i></option>
@@ -237,7 +233,29 @@
                 <i class="fas fa-backward fa-2x"></i></button>
         </section>
     </section>
+    <script>
+        // Función para validar el formulario antes de enviarlo
+        function validarFormulario() {
+            var nombre = document.getElementById("nombre").value;
+            var usuario = document.getElementById("usuario").value;
+            var clave = document.getElementById("clave").value;
+            var correo = document.getElementById("correo").value;
+            var cedula = document.getElementById("cedula").value;
+            var telefono = document.getElementById("tele").value;
 
+            // Verificar si algún campo está vacío
+            if (nombre === "" || usuario === "" || clave === "" || correo === "" || cedula === "" || telefono === "") {
+                alert("Por favor, complete todos los campos.");
+                return false; // Evitar el envío del formulario
+            }
+
+            // Si todos los campos están llenos, mostrar un mensaje de usuario registrado
+            alert("Usuario registrado correctamente.");
+            // Redirigir al CRUD
+            window.location.href = "./gestionUsuarios.php";
+            return true; // Permitir el envío del formulario
+        }
+    </script>
 </body>
 
 </html>
